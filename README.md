@@ -4,7 +4,7 @@
 ## General 
 - Frameworks: MERN
 - Node Version 20.13.1
-- Packages Used: nodemon, dotenv
+- Packages Used: nodemon, dotenv, express
 
 ## Site - Structure
 ### Basic User Stories To Cover (Generally Client Side Stuff)
