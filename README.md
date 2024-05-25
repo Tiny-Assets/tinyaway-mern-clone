@@ -1,10 +1,16 @@
-# tinyaway-clone
-    Testing TinyAway Clone
+# TinyAway-Clone
+Testing TinyAway Clone
 
 ## General 
 - Frameworks: MERN
 - Node Version 20.13.1
-- Packages Used: nodemon, dotenv, express
+- Packages Used: nodemon, dotenv, express, mongoose, 
+
+## dotenv
+- Backend Port: 4000 
+- MongoDB URI: mongodb+srv://ta-mockdata:password123!@tinyaway-mockdata.txqwip5.mongodb.net/?retryWrites=true&w=majority&appName=TinyAway-MockData
+    - MongoDB URI Username: ta-mockdata
+    - MongoDB URI Password: password123!
 
 ## Site - Structure
 ### Basic User Stories To Cover (Generally Client Side Stuff)
