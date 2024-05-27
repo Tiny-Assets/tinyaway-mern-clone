@@ -1,8 +1,8 @@
-# TinyAway-Clone
+# Tiny-Away Clone MERN
 Testing TinyAway Clone
 
 ## General 
-- Frameworks: MERN
+- Framework / Stack: MERN
 - Node Version 20.13.1
 - Packages Used: nodemon, dotenv, express, mongoose, 
 
