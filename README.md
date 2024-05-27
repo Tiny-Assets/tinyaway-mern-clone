@@ -1,5 +1,6 @@
 # Tiny-Away Clone MERN
-Testing TinyAway Clone
+Testing Tiny Away Clone with MERN
+Based on MVC structure
 
 ## General 
 - Framework / Stack: MERN
@@ -13,7 +14,7 @@ Testing TinyAway Clone
     - MongoDB URI Password: password123!
 
 ## Database 
-Just a simple listings collection for mock data, nothing fancy or complicated. 
+Just a simple listings collection for mock data
 
 ## Site - Structure
 ### Basic User Stories To Cover (Generally Client Side Stuff)
