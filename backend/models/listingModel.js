@@ -9,6 +9,10 @@ const listingSchema = new Schema ({
         type: String, 
         required: true
     }, 
+    description: {
+        type: String, 
+        required: true
+    }, 
     roomType: {
         type: String, 
         required: true
