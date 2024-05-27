@@ -5,7 +5,12 @@ Based on MVC structure
 ## General 
 - Framework / Stack: MERN
 - Node Version 20.13.1
-- Packages Used: nodemon, dotenv, express, mongoose, 
+- Packages Used: nodemon, dotenv, express, mongoose, react-router-dom, 
+- If npm start does not work for Frontend, try running the following: 
+    npm update 
+
+If it still does not work, try running: 
+    npm audit fix --force 
 
 ## dotenv
 - Backend Port: 4000 
@@ -16,8 +21,10 @@ Based on MVC structure
 ## Database 
 Just a simple listings collection for mock data
 
+## Frontend 
+
 ## Site - Structure
-### Basic User Stories To Cover (Generally Client Side Stuff)
+### Basic User Stories (Generally Client Side Stuff)
 - As a user, I can see all Tiny House locations and availability 
 - As a user, I can see reviews of stays at various locations [aka Tiny Stories]
 - As a user, I can read the About Us page

@@ -1,0 +1,30 @@
+.homeRibbon {
+    display: flex;
+    background-color: #FFF5AC;
+    margin: 0px; 
+    padding: 0px; 
+    height: 48px; 
+    width: 100vw; 
+    align-items: center;
+    justify-content: center; 
+  }
+  
+.homeRibbon p {
+    width: 100vw; 
+    margin: 0px; 
+    font-size: 18px;
+    text-align: center; 
+  }
+  
+.homeHero {
+    margin: 0px; 
+    height: 800px;
+    width: 100vw;  
+    background-image: url('../assets/homepage/hero-section-bg.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+  }
+  
+.homeHero h2 {
+    margin: 0px; 
+  }
