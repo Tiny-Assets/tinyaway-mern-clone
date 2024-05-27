@@ -12,6 +12,9 @@ Testing TinyAway Clone
     - MongoDB URI Username: ta-mockdata
     - MongoDB URI Password: password123!
 
+## Database 
+Just a simple listings collection for mock data, nothing fancy or complicated. 
+
 ## Site - Structure
 ### Basic User Stories To Cover (Generally Client Side Stuff)
 - As a user, I can see all Tiny House locations and availability 

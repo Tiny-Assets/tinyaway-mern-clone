@@ -1,5 +1,6 @@
 import express from 'express'; 
 
+// set up router for all tiny house listings
 const listings = express.Router(); 
 
 // GET all listings
