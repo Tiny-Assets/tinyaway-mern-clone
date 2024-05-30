@@ -5,7 +5,7 @@ Based on MVC structure
 ## General 
 - Framework / Stack: MERN
 - Node Version 20.13.1
-- Packages Used: nodemon, dotenv, express, mongoose, react-router-dom, 
+- Packages Used: nodemon, dotenv, express, mongoose, react-router-dom, material-symbols@latest, 
 - If npm start does not work for Frontend, try running the following: 
     npm update 
 

@@ -1,0 +1,64 @@
+/* bannerBar styles */
+.bannerBar {
+    background-color: #FFF5AC; 
+    color: black;
+    width: 100vw; 
+    font-size: 18px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+/* hover effect for bannerBar */
+.bannerBar:hover {
+    background-color: #EFE58D;
+}
+
+/* navBar styles */
+.navBar {
+    color: white;  
+    display: flex; 
+    position: sticky;  
+    height: 120px; 
+    width: 100vw; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.navBar .taLogo img {
+    width: 187px; 
+    margin-left: 10px; 
+}
+
+.navLinks {
+    display: flex;
+    margin-right: 50px;   
+    align-items: center; 
+    font-size: 17px; 
+}
+
+.navLinks div {
+    margin: 15px; 
+}
+
+.navLinks .bookStay {
+    background-color: white;
+    color: #606060;
+    width: 190px; 
+    height: 51px;  
+    font-size: 18px;
+    text-align: center;  
+    align-content: center; 
+    border-radius: 2rem; 
+    color: black; 
+}
+
+/* navLinks hover effects */
+.navLinks .linkTo:hover {
+    color: #DBDBDB
+}
+
+.bookStay:hover {
+    background-color: #FFF5AC;
+    color: black; 
+}

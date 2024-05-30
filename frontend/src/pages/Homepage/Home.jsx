@@ -1,20 +1,19 @@
-import '../index.css'; 
-import Navbar from '../components/Navbar';
+// import css 
+import '../Homepage/home.css'; 
+
+// import components & pages 
+import Navbar from '../../components/sharedComponents/Navbar/Navbar';
+import SearchArea from '../../components/sharedComponents/SearchArea/SearchArea';
 
 const Home = () => {
     return(
         <div>
             {/* mini ribbon banner at top (not sticky) */}
-            <div className="homeRibbon">
-                <p>Discover Nature. Stay In Comfort</p>
-            </div>
-
+            {/* needs to be clickable */}
             {/* hero banner + 'navbar' (sticky) + search function */}
             <div className="homeHero">
                 <Navbar />
-                <div>
-                    <h2>Search Area</h2>
-                </div>
+                <SearchArea />
             </div>
             
             {/* popular tiny house listings */}
