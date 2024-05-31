@@ -1,3 +1,7 @@
+import { Link } from 'react-router-dom';
+
+// import GiftCards from '../../../pages/Giftcards/giftCards';
+
 // import assets & icons 
 import logoWhite from '../../../assets/logoWhite.png'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -28,7 +32,7 @@ const Navbar = () => {
 
                 {/* links side */}
                 <div className="navLinks">
-                    <div className="link" onClick={ click }>
+                    <div to="/giftCards" className="link" onClick={ click }>
                         GIFT CARDS
                     </div>
                     <div className="link" onClick={ click }>
@@ -48,9 +52,9 @@ const Navbar = () => {
                     </div>
 
                     {/* burger menu within links side */}
-                    <div className="burgerMenu" onClick={ click }>
+                    <button className="burgerIcon" onClick={ click }>
                         <FontAwesomeIcon icon={ faBars } />
-                    </div>
+                    </button>
                 </div>
             </div>
         </>

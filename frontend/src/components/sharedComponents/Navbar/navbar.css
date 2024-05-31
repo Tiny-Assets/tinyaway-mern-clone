@@ -18,7 +18,7 @@
     background-color: #EFE58D;
 }
 
-/* navBar styles */
+/* nav bar styles */
 .navBar {
     position: sticky; 
     top: 0; 
@@ -61,7 +61,7 @@
 }
 
 /* icon styles */
-.loginIcon , .cartIcon {
+.loginIcon {
     background-color: #FFF5AC;
     border-radius: 2rem;  
 }
@@ -74,17 +74,13 @@
 }
 
 .cartIcon svg {
-    color: grey; 
-    font-size: 20px; 
+    color: white; 
+    font-size: 24px; 
     padding: 12px; 
     vertical-align: middle; 
 }
 
-.burgerMenu svg {
-    font-size: 28px; 
-}
-
-/* navLinks hover effects */
+/* hover effects for nav bar links */
 .navLinks .link:hover {
     color: #DBDBDB
 }
@@ -92,4 +88,16 @@
 .bookStay:hover {
     background-color: #FFF5AC;
     color: black; 
+}
+
+/* burger menu button styles */
+.burgerIcon {
+    background-color: transparent;
+    border: none; 
+}
+
+.burgerIcon svg { 
+    color: white; 
+    font-size: 28px; 
+
 }
