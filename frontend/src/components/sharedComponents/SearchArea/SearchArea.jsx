@@ -3,12 +3,14 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const SearchArea = () => {
     return(
+        // title header
         <div className="searchArea">
             <h1>
                 Book & Experience Amazing <br/>
                 Tiny Houses
             </h1>
             
+            {/* search bar filters & buttons */}
             <div className="searchBar">
                 <div className="filterField" id="start">
                     <div className="fieldName">
@@ -35,7 +37,9 @@ const SearchArea = () => {
                     <FontAwesomeIcon className="fieldArrow" icon= { faArrowRight }/>
                 </div>
                 <div className="searchField" id="end">
-                    <div className="fieldName">SEARCH</div>
+                    <div className="fieldName">
+                        SEARCH
+                    </div>
                 </div>
             </div>
         </div>

@@ -9,6 +9,10 @@
     align-items: center; 
 }
 
+.bannerBar svg {
+    margin-left: 10px; 
+}
+
 /* hover effect for bannerBar */
 .bannerBar:hover {
     background-color: #EFE58D;
@@ -16,6 +20,8 @@
 
 /* navBar styles */
 .navBar {
+    position: sticky; 
+    top: 0; 
     color: white;  
     display: flex; 
     position: sticky;  
@@ -27,7 +33,7 @@
 
 .navBar .taLogo img {
     width: 187px; 
-    margin-left: 10px; 
+    margin-left: 63px; 
 }
 
 .navLinks {
@@ -38,9 +44,10 @@
 }
 
 .navLinks div {
-    margin: 15px; 
+    margin: 21px; 
 }
 
+/* book your stay link styles */
 .navLinks .bookStay {
     background-color: white;
     color: #606060;
@@ -53,8 +60,32 @@
     color: black; 
 }
 
+/* icon styles */
+.loginIcon , .cartIcon {
+    background-color: #FFF5AC;
+    border-radius: 2rem;  
+}
+
+.loginIcon svg {
+    color: grey;
+    font-size: 28px;  
+    padding: 10px; 
+    vertical-align: middle; 
+}
+
+.cartIcon svg {
+    color: grey; 
+    font-size: 20px; 
+    padding: 12px; 
+    vertical-align: middle; 
+}
+
+.burgerMenu svg {
+    font-size: 28px; 
+}
+
 /* navLinks hover effects */
-.navLinks .linkTo:hover {
+.navLinks .link:hover {
     color: #DBDBDB
 }
 

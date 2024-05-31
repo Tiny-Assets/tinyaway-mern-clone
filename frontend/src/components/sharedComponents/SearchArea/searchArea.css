@@ -7,11 +7,17 @@
     margin-top: 217px; 
 }
 
+/* title styles */
 .searchArea h1 {
     font-size: 64px; 
     text-align: center;
 }
 
+.searchArea h1 br {
+    height: 0.1rem; 
+}
+
+/* search bar filter styles */
 .searchBar {
     width: 100vw; 
     display: flex; 
@@ -45,6 +51,7 @@
     border-bottom-left-radius: 2rem;  
 }
 
+/* search button */
 .searchField {
     background-color: #FFF5AC; 
     color: #111827; 
