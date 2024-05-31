@@ -1,0 +1,27 @@
+.burgerMenu {
+    background-color: white; 
+    z-index: 20; 
+    position: fixed; 
+    right: 0px; 
+    top: 0px; 
+    height: 100vh; 
+    width: 470px; 
+    text-align: right; 
+    padding-top: 83px; 
+}
+
+.burgerMenu div {
+    margin-right: 55px; 
+    font-size: 21px; 
+    color: #5F5C5C; 
+    margin-bottom: 15px; 
+}
+
+.burgerMenu .subMenu {
+    padding-right: 41px;
+    padding-top: 5px; 
+    padding-bottom: 5px; 
+    margin-top: 0px; 
+    margin-bottom: 0px; 
+    border-right: 0.2px solid grey; 
+}

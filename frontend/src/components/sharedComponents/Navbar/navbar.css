@@ -74,10 +74,10 @@
 }
 
 .cartIcon svg {
+    margin-right: 21px; 
+    vertical-align: middle; 
     color: white; 
     font-size: 24px; 
-    padding: 12px; 
-    vertical-align: middle; 
 }
 
 /* hover effects for nav bar links */

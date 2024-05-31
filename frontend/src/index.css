@@ -5,6 +5,7 @@
 @import url('../src/pages/Homepage/home.css'); /*homepage styles*/ 
 @import url('./components/sharedComponents/Navbar/navbar.css'); /*navbar styles*/
 @import url('./components/sharedComponents/SearchArea/searchArea.css'); /*searchbar styles*/
+@import url('./components/sharedComponents/BurgerMenu/burgerMenu.css');
 
 /* root styles */
 :root {
