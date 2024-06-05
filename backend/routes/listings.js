@@ -13,4 +13,5 @@ listings.get('/:id', (req, res) => {
     res.json({msg: 'GET single listing'}); 
 }); 
 
+
 export default listings; 

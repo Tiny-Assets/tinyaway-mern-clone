@@ -6,10 +6,14 @@ Based on MVC structure
 - Framework / Stack: MERN
 - Node Version 20.13.1
 - Packages Used: nodemon, dotenv, express, mongoose, react-router-dom, font awesome, 
-- If npm start does not work for Frontend, try running the following: 
+- React framework created with Vite to stay up to date 
+
+- If npm start does not work for Frontend, try running the following
+
     npm update 
 
-If it still does not work, try running: 
+If it still does not work, try running 
+
     npm audit fix --force 
 
 ## dotenv

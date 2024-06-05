@@ -1,0 +1,64 @@
+/* styles for search bar area */
+
+/* overall div + title area styles */
+.searchArea {
+    width: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 349px; 
+}
+
+.searchArea .mainTitle {
+    width: 874px; 
+    color: white; 
+    font-size: 64px; 
+    text-align: center; 
+}
+
+/* search bar filter area styles */
+.searchBar {
+    display: flex; 
+    color: black; 
+}
+
+.filterBox {
+    font-family: var(--main-font); 
+    background-color: white; 
+    color: var(--darkgrey-text); 
+    font-size: 21px; 
+    width: 219.57px; 
+    height: 63.98px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around;
+    border-right: 0.5px solid rgba(0,0,0,0.15);
+}
+
+
+.arrow {
+    color: var(--lightgrey-1);
+    font-weight: lighter;  
+    font-size: 16.73px; 
+    /* margin-right: 20px;  */
+}
+
+/* start & end of search bar filter styles */
+#start {
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+#end {
+    background-color: var(--corp-yellow); 
+    color: var(--darkgrey-2); 
+    width: 219.57px; 
+    height: 63.98px; 
+    font-family: var(--main-font); 
+    font-size: 21px; 
+    font-weight: 600; 
+    align-content: center; 
+    text-align: center; 
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}

@@ -1,0 +1,57 @@
+.menuOverlay {
+    /* ensure the expanded menu is on top of other elements on the page */
+    background-color: white; 
+    color: black; 
+    height: 100vh;
+    width: 470px; 
+    position: fixed; 
+    right: 0px;
+    top: 0px;   
+    z-index: 2000;
+    
+    /* layout within expanded menu */
+    display: flex; 
+    flex-direction: column; 
+    align-items: end; 
+}
+
+.menuItem {
+    margin-right: 45px; 
+    margin-bottom: 20px; 
+    font-family: var(--main-font); 
+    font-size: 21px;  
+    color: var(--darkgrey-1); 
+}
+
+#firstItem {
+    margin-top: 23px; 
+    color: var(--corp-black-text); 
+}
+
+#closeBurger {
+    color: var(--lightgrey-2); 
+    font-size: 38px; 
+    font-weight: lighter; 
+    margin-top: 83px; 
+}
+
+#moreOptions {
+    display: flex; 
+    flex-direction: column;
+    align-items: end; 
+}
+
+.subMenu {
+    display: flex; 
+    flex-direction: column; 
+    margin-top: 5px; 
+    padding-bottom: 10px; 
+    padding-right: 43px; 
+    border-right: 1px solid var(--darkgrey-1); 
+}
+
+.subMenu div {
+    margin-top: 15px; 
+    vertical-align: middle;
+}
+

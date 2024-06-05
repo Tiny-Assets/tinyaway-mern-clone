@@ -1,0 +1,20 @@
+/* top yellow ribbon styles */
+.banner {
+    background-color: var(--corp-yellow); 
+    width: 100%; 
+    height: 48px; 
+    margin: 0px;   
+    align-content: center; 
+}
+
+p {
+    margin: 0px; 
+    font-size: 18px; 
+    font-weight: 300; 
+    text-align: center; 
+}
+
+/* hover effects for ribbon */
+.banner:hover {
+    background-color: var(--hover-yellow);
+}

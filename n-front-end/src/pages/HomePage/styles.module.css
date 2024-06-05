@@ -1,0 +1,8 @@
+/* inserting background image for hero section */
+.heroSection {
+    background-image: url('../../assets/heroBG.jpg');
+    background-size: cover; 
+    background-position: center;
+    width: 100%; 
+    height: 1080px; 
+}
