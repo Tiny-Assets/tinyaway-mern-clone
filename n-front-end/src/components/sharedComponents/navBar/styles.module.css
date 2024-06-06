@@ -17,12 +17,13 @@
 }
 
 /* styling the right side with navigation links */
-.navLinks {
+.navLinks Button {
     font-family: var(--main-font); 
     font-size: 21px; 
     display: flex; 
     align-items: center; 
-    margin-right: 45px; 
+    /* margin-right: 45px;  */
+    color: white; 
 }
 
 .singleLink {
