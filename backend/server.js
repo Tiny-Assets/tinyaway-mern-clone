@@ -7,8 +7,6 @@ config();
 const port = process.env.PORT; 
 const mongoURI = process.env.MONGO_URI; 
 
-// testing 
-
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(mongoURI, {
     serverApi: {
