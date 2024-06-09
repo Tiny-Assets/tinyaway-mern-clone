@@ -1,9 +1,10 @@
 import { createBrowserRouter } from 'react-router-dom';
-import App from './src/App';
+import HomePage from './src/pages/HomePage';
+import './src/App.css'
 
 
 export const mainRouter = createBrowserRouter([
-    {path: '/', element: < App />},
+    {path: '/', element: <HomePage />},
     // {path: '/aboutUs', element: < AboutUs />}, 
     // {path: '/showListings', element: < ShowListings />}, 
     // {path: 'tinyAwayEscape', element: < TinyAwayEscape />},
