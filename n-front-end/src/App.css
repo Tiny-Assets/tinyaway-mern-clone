@@ -17,6 +17,7 @@ body {
     padding: 0px; 
     margin: 0px; 
     font-family: 'Source Sans 3'; 
+    cursor: default;
 }
 
 h1 {

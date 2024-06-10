@@ -1,10 +1,12 @@
 import styled from 'styled-components'; 
+import Navbar from './sharedComponents/Navigation/Navbar';
 import SearchBar from './homepage-SearchBar';
 
 // functional component
 function SearchArea() {
     return(
         <SearchAreaStyle id='bgimg'>
+            <Navbar />
             <ContentArea>
                 <h1>
                     Book & Experience Amazing <br/>
@@ -27,9 +29,8 @@ const SearchAreaStyle = styled.div`
     align-items: center;  
     color: white; 
 `
-
 const ContentArea = styled.div`
-    padding-top: 350px; 
+    padding-top: 225px; 
     text-align: center; 
 `
 

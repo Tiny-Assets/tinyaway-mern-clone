@@ -4,20 +4,6 @@ import logoWhite from '../../../assets/logoWhite.png';
 import NavLinks from './NavLinks';
 import BurgerExpanded from './BurgerExpanded';
 
-// declaring styled elements for navbar
-const NavigationTop = styled.div`
-    background-color: black;
-    color: white; 
-    height: 120px; 
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-
-    & > img {
-        width: 187px; 
-    }
-`;
-
 // functional stateful component
 function Navbar() {
     // functional burger menu 
@@ -41,3 +27,20 @@ function Navbar() {
 }
 
 export default Navbar; 
+
+// declaring styled elements for navbar
+const NavigationTop = styled.div`
+    background-color: transparent;
+    color: white; 
+    width: 100vw; 
+    position: sticky; 
+    top: 0px; 
+    height: 120px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+
+    & > img {
+        width: 187px; 
+    }
+`;

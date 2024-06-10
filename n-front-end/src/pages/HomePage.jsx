@@ -1,10 +1,10 @@
-import NavTop from '../components/sharedComponents/Navigation/NavTop';
+import RibbonBanner from '../components/sharedComponents/Navigation/RibbonBanner';
 import SearchArea from '../components/homepage-SearchArea';
 
 function HomePage() {
     return(
         <>
-            < NavTop />     
+            < RibbonBanner />     
             < SearchArea /> 
         </>
     ); 
