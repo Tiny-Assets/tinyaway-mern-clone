@@ -1,62 +1,73 @@
-import { useState } from 'react'; 
+import { useContext, useEffect } from 'react'; 
 import styled from 'styled-components'; 
+import { GuestContext } from '../contexts/SearchBarContext';
 
-
-export default function GuestSelection(props) {
+export default function GuestSelection() {
     // manage state for number of guests
-    const [adults, setAdults] = useState(0); 
-    const [kids, setKids] = useState(0); 
+    const { guestCount, setGuestCount, adults, setAdults, kids, setKids } = useContext(GuestContext);
 
     // adjust number of people 
     const addAdult = () => {
         setAdults(prev => prev + 1); 
-        props.updateGuestCount(adults + kids + 1); 
     }
 
     const removeAdult = () => {
         if (adults > 0) {
         setAdults(prev => prev - 1); 
-        props.updateGuestCount(adults + kids - 1); 
         }
     }
 
     const addKid = () => {
         setKids(prev => prev + 1); 
-        props.updateGuestCount(kids + adults + 1); 
     }
 
     const removeKid = () => {
         if (kids > 0) {
         setKids(prev => prev - 1); 
-        props.updateGuestCount(kids + adults - 1); 
         }
     }
 
+    const updateGuestCount = () => {
+        var total = adults + kids;
+        setGuestCount(total);      
+    }
+
+    useEffect(() => {
+        updateGuestCount();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [adults, kids]);
+
+    useEffect(() => {
+        console.log(`${guestCount} guests selected`); }
+    ,[guestCount]);
+
     return(
         <GuestBox>
-            <p style={{margin:'0'}}>{props.guestCount} PEOPLE</p>
-            <CategoryRow>
+            <OneSection>
+                <p style={{margin:'0'}}>{ guestCount } PEOPLE</p>
+            </OneSection>
+            <OneSection>
                 <Category>
                     <div>Adults</div>
                     <p style={{color: 'grey', fontSize: '18px', margin: '0px'}}>Age 13 and above</p>
                 </Category>
                 <Numbers>
-                    <QuantityBtn onClick={ removeAdult }>-</QuantityBtn>
+                    <QuantityBtn className='decrement' onClick={ removeAdult }>-</QuantityBtn>
                     <p>{adults}</p>
                     <QuantityBtn onClick={ addAdult }>+</QuantityBtn>
                 </Numbers>
-            </CategoryRow>
-            <CategoryRow>
+            </OneSection>
+            <OneSection>
                 <Category>
                     <div>Children</div>
                     <p style={{color: 'grey', fontSize: '18px', margin: '0px'}}>Ages 2 to 12</p>
                 </Category>
                 <Numbers>
-                    <QuantityBtn onClick={ removeKid }>-</QuantityBtn>
+                    <QuantityBtn className='decrement' onClick={ removeKid }>-</QuantityBtn>
                     <p>{kids}</p>
                     <QuantityBtn onClick={ addKid }>+</QuantityBtn>
                 </Numbers>
-            </CategoryRow>
+            </OneSection>
         </GuestBox>
     ); 
 }
@@ -65,19 +76,16 @@ export default function GuestSelection(props) {
 const GuestBox = styled.div`
     background-color: white;
     color: var(--corpDarkGrey1);  
-    width: 350px; 
-    position: absolute; 
-    top: 120%; 
-    left: 42%; 
     display: flex; 
     flex-direction: column; 
     align-items: flex-start; 
     border-radius: 1rem; 
     font-size: 21px; 
-    padding: 20px; 
+    padding: 20px;
+    margin-top: 10px;  
 `; 
 
-const CategoryRow = styled.div`
+const OneSection = styled.div`
     width: 350px; 
     margin-top: 15px; 
     display: flex; 
@@ -97,7 +105,7 @@ const Numbers = styled.div`
 `
 
 const QuantityBtn = styled.div`
-    background-color: var(--corpLightGrey2); 
+    background-color: var(--corpDarkGrey2); 
     color: white; 
     height: 30px; 
     width: 30px; 
@@ -106,4 +114,8 @@ const QuantityBtn = styled.div`
     align-items: center; 
     border-radius: 50%; 
     font-size: 21px; 
+
+    &.decrement {
+        background-color: var(--corpLightGrey2); 
+    }
 `
