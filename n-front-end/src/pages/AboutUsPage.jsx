@@ -1,5 +1,7 @@
 export default function AboutUsPage() {
     return(
-        <h1>hello sweetie</h1>
+        <>
+        <h1>About Us Page</h1>
+        </>
     ); 
 }

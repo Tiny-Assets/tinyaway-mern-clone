@@ -28,11 +28,4 @@ const StyledField = styled.div`
         border-top-left-radius: 2rem;
         border-bottom-left-radius: 2rem; 
     }
-
-    &.end {
-        background-color: var(--corpYellow); 
-        color: var(--corpBlack); 
-        border-top-right-radius: 2rem; 
-        border-bottom-right-radius: 2rem; 
-    }
 `;

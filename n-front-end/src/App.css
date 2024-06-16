@@ -14,15 +14,27 @@
 
 /* declaring main font according to UI design */
 body {
+    background-color: #F2F2F2;
     padding: 0px; 
     margin: 0px; 
     font-family: 'Source Sans 3'; 
     cursor: default;
+
 }
 
 h1 {
     font-family: 'Work Sans'; 
     font-size: 64px; 
+    margin: 0px; 
+}
+
+h2 {
+    font-family: 'Source Sans 3'; 
+    font-size: 32px; 
+    margin: 0px;  
+}
+
+p {
     margin: 0px; 
 }
 

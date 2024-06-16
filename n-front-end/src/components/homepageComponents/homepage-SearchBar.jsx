@@ -1,4 +1,4 @@
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { useState, useContext } from 'react';
 import styled from 'styled-components'; 
 import { GuestContext, RoomFieldContext } from '../contexts/SearchBarContext';
@@ -14,7 +14,7 @@ export default function SearchBar() {
     const { guestCount, adults, kids } = useContext(GuestContext); 
     const [searchParams, setSearchParams] = useSearchParams(); 
 
-    const constructQueryString = (roomCount, familyRooms, groupRooms, guestCount, adults, kids) => {
+    const createQueryString = (roomCount, familyRooms, groupRooms, guestCount, adults, kids) => {
         let queryString = '?';
             if (roomCount > 0) queryString += `roomCount=${roomCount}&`;
             if (familyRooms > 0) queryString += `familyRooms=${familyRooms}&`;
@@ -26,7 +26,7 @@ export default function SearchBar() {
     };
 
     const clickSearch = () => {
-        const queryString = constructQueryString(roomCount, familyRooms, groupRooms, guestCount, adults, kids);
+        const queryString = createQueryString(roomCount, familyRooms, groupRooms, guestCount, adults, kids);
         setSearchParams(queryString);
         for (let [key, value] of searchParams.entries()) {
             console.log(`${key}: ${value}`);
@@ -78,7 +78,9 @@ export default function SearchBar() {
                             < RoomSelection />
                         }
                 </FieldWithSubWindow>
-            <Field className='end' name='SEARCH' onClick={ clickSearch }/>
+                <SearchFunction>
+                    <Link to='showListings'>SEARCH</Link>
+                </SearchFunction>
         </FilterBar>
     );
 }
@@ -104,4 +106,15 @@ const FieldWithSubWindow = styled.div`
     display: flex; 
     flex-direction: column; 
     border-radius: 2rem; 
+`
+
+const SearchFunction = styled.div`
+    background-color: var(--corpYellow);
+    color: var(--corpBlack); 
+    font-size: 21px; 
+    height: 64px; 
+    padding: 0px 70px; 
+    border-top-right-radius: 2rem; 
+    border-bottom-right-radius: 2rem;  
+    align-content: center; 
 `

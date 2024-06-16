@@ -30,7 +30,7 @@ export default Navbar;
 
 // declaring styled elements for navbar
 const NavigationTop = styled.div`
-    background-color: transparent;
+    background-color: var(--corpBlack);
     color: white; 
     width: 100vw; 
     position: sticky; 
