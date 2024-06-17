@@ -32,13 +32,13 @@ export default function SampleSearchListings() {
                     <CardGrid>
                     { test.map((singleHouse) => (
                         <SingleHouseCard key={singleHouse._id}>
-                        <div key={singleHouse._id}>
-                            <ListingPhoto style={{ backgroundImage: `url(${singleHouse.images.picture_url})` }} />
-                        </div>
-                        <Details>
-                            <h2>{singleHouse.name.toUpperCase()}</h2>
-                            <p>ID: {singleHouse._id}</p>
-                        </Details>
+                            <div key={singleHouse._id}>
+                                <ListingPhoto style={{ backgroundImage: `url(${singleHouse.images.picture_url})` }} />
+                            </div>
+                            <Details>
+                                <h2>{singleHouse.name.toUpperCase()}</h2>
+                                <p>ID: {singleHouse._id}</p>
+                            </Details>
                         <IconDrawer>Icon Drawer</IconDrawer>
                         </SingleHouseCard>
                     ))}

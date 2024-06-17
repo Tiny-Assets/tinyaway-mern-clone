@@ -6,7 +6,6 @@ export default function SampleTopListings() {
     const [isLoading, setIsLoading] = useState(true); 
 
     const url = "http://localhost:4000/api/list12"; 
-
     useEffect(() => {
     fetch(url)
         .then((res) => {
@@ -23,7 +22,7 @@ export default function SampleTopListings() {
     }, []); 
     
     return (
-        <>
+        <Layout>
             <SectionHeader>
                 <h2>POPULAR TINY HOUSE DESTINATIONS</h2>
                 <p>Hear it from our guests. A list of tiny houses specially curated for you, based on reviews from previous guests.</p>
@@ -31,19 +30,40 @@ export default function SampleTopListings() {
             { isLoading ? (
                 <div>Loading...</div>
             ):(
-                <div>
+                <CardGrid>
                     { sample12Data.map((singleHouse) => {
                     return (
-                        <div key={singleHouse._id}>
-                            <p>{singleHouse.name}</p>
-                        </div>
+                        <SingleHouse key={singleHouse._id}>
+                            <div key={singleHouse._id}>
+                                <HousePicture style={{ backgroundImage : `url(${singleHouse.images.picture_url})` }} />
+                            </div>
+                            <FullDetails>
+                                <HouseDetails>
+                                    <h3>{ singleHouse.name.toUpperCase() }</h3>
+                                    <p>{ singleHouse.address.street.toUpperCase() }</p>
+                                </HouseDetails>
+                                <PriceDetails>
+                                    <h4>RM{ singleHouse.price.$numberDecimal }</h4>
+                                    <p>/night</p>
+                                </PriceDetails>
+                            </FullDetails>
+                            <Description>
+                                <p>{ singleHouse.space }</p>
+                            </Description>
+                        </SingleHouse> 
                     )})
                     }
-                </div>
+                </CardGrid>
             )}
-        </>
+        </Layout>
     )
 }
+
+const Layout = styled.div`
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+`;
 
 const SectionHeader = styled.div`
     display: flex; 
@@ -57,4 +77,72 @@ const SectionHeader = styled.div`
     font-size: 64px; 
     font-weight: bold; 
     }
+`;
+
+const CardGrid = styled.div`
+    width: 1800px; 
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 45px; 
+    margin-bottom: 300px; 
+`;
+
+const SingleHouse = styled.div` 
+    background-color: white; 
+    height: 860px; 
+    width: 531px; 
+    border: 2px solid var(--corpLightGrey1);
+    border-radius: 1rem;  
+`;
+
+const HousePicture = styled.div`
+    background-size: cover; 
+    height: 501px; 
+    background-repeat: no-repeat;
+    border-radius: 1rem 1rem 0rem 0rem; 
+`;
+
+const FullDetails = styled.div`
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    border-bottom: 2px solid var(--corpLightGrey1); 
+`;
+
+const PriceDetails = styled.div`
+    height: 100px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-end;  
+    justify-content: flex-start; 
+    padding: 10px; 
+
+    & h4 {
+        font-size: 24px; 
+        margin: 0px; 
+    }
+`; 
+
+const HouseDetails = styled.div`
+    width: 511px; 
+    height: 100px; 
+    display: flex; 
+    flex-direction: column; 
+    font-size: 25px;
+    padding: 10px;  
+
+    & p {
+        font-size: 18px; 
+        margin-top: 5px; 
+    }
+`;
+
+const Description = styled.div`
+    height: 160px; 
+    padding: 10px; 
+    font-size: 18px; 
+    color: var(--corpLightGrey2); 
+    overflow: hidden; 
+    border-bottom: 2px solid var(--corpLightGrey1); 
 `
