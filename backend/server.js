@@ -1,7 +1,7 @@
 import './database.js'; 
 import express from 'express'; 
 import cors from 'cors'; 
-import { testFxn } from './controllers/sampleController.js';
+import { testFxn, call12 } from './controllers/sampleController.js';
 
 const app = express(); 
 const PORT = process.env.PORT || 4000; 
@@ -20,6 +20,17 @@ app.get('/', (req, res) => {
   res.send('Testing Now'); 
 }); 
 
+app.get('/api/list12', async (req, res) => {
+  try {
+    const result = await call12(); 
+    res.json(result)
+} catch (error) {
+  // Handle errors appropriately
+  console.error(error);
+  res.status(500).send('An error occurred');
+}
+}); 
+
 // Testing Function
 app.get('/api/test', async (req, res) => {
   try {
@@ -32,3 +43,4 @@ app.get('/api/test', async (req, res) => {
     res.status(500).send('An error occurred');
 }
 });
+

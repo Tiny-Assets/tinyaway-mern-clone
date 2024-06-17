@@ -25,7 +25,7 @@ export default function SampleSearchListings() {
 
      return (
         <>
-            {loading? (
+            {loading ? (
                 <div>Loading...</div>
             ) : (
                 <Layout>
@@ -41,10 +41,9 @@ export default function SampleSearchListings() {
                         </Details>
                         <IconDrawer>Icon Drawer</IconDrawer>
                         </SingleHouseCard>
-                        )) 
-                    }
+                    ))}
                     </CardGrid>
-                    <GoogleMap />
+                    <GoogleMap>Google Map</GoogleMap>
                 </Layout>
             )}
         </>
@@ -60,8 +59,8 @@ const Layout = styled.div`
 const GoogleMap = styled.div`
     background-color: orange; 
     position: sticky; 
-    top: 130px; 
-    height: 790px; 
+    top: 140px; 
+    height: 850px; 
     width: 710px; 
     z-index: -1;
     border-radius: 1rem; 
@@ -84,10 +83,9 @@ const SingleHouseCard = styled.div`
 
 const ListingPhoto = styled.div`
     background-size: cover; 
-    background-position: center; 
-    height: 501px; 
+    height: 503px; 
     width: 100%; 
-    border-radius: 1rem 1rem 0rem 0rem; 
+    border-radius: 0.8rem 0.8rem 0rem 0rem; 
 `
 
 const Details = styled.div`

@@ -4,8 +4,9 @@
 /* setting up colors and fonts */
 :root {
     --corpYellow: #FFF5AC; 
-    --corpYellow-hover: #EFE58D; 
+    --corpYellowHover: #EFE58D; 
     --corpBlack: #111827; 
+    --corpGrey: #F2F2F2
     --corpLightGrey1: #DBDBDB; 
     --corpLightGrey2: #969696; 
     --corpDarkGrey1: #606060; 
@@ -14,7 +15,7 @@
 
 /* declaring main font according to UI design */
 body {
-    background-color: #F2F2F2;
+    background-color: var(--corpGrey);
     padding: 0px; 
     margin: 0px; 
     font-family: 'Source Sans 3'; 
@@ -35,6 +36,7 @@ h2 {
 }
 
 p {
+    font-family: 'Source Sans 3'; 
     margin: 0px; 
 }
 

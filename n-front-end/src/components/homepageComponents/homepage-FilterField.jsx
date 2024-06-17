@@ -15,7 +15,7 @@ export default function Field({ name, className, onClick }) {
 const StyledField = styled.div`
     background-color: white; 
     color: var(--corpDarkGrey1); 
-    border-right: 1px solid var(--corpLightGrey1); 
+    border-right: 1px solid var(--corpLightGrey2); 
     height: 64px; 
     font-size: 21px; 
     position: relative; 

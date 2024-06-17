@@ -87,12 +87,10 @@ export default function SearchBar() {
 
 // search filter styles
 const FilterBar = styled.div`
-    background-color: transparent; 
     display: flex; 
     align-items: start; 
     margin-top: 50px; 
     z-index: 20; 
-    // border-radius: 2rem; 
 `;
 
 const FieldWithSubmenu = styled.div`
@@ -106,7 +104,7 @@ const FieldWithSubWindow = styled.div`
     display: flex; 
     flex-direction: column; 
     border-radius: 2rem; 
-`
+`;
 
 const SearchFunction = styled.div`
     background-color: var(--corpYellow);
@@ -117,4 +115,4 @@ const SearchFunction = styled.div`
     border-top-right-radius: 2rem; 
     border-bottom-right-radius: 2rem;  
     align-content: center; 
-`
+`;
