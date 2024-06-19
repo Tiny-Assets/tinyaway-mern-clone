@@ -1,6 +1,6 @@
 # Tiny-Away Clone MERN
 
-Testing Tiny Away Clone with MERN
+Testing Tiny Away Clone with MERN / NextJS
 Based on MVC structure
 
 ## General
@@ -25,4 +25,3 @@ If it still does not work, try running
   - MongoDB URI Username: ta-mockdata
   - MongoDB URI Password: password123!
 
-test

@@ -41,7 +41,7 @@ const NavigationTop = styled.div`
     background-color: var(--corpBlack);
     color: white; 
     width: 100vw; 
-    position: sticky; 
+    position: sticky;  
     top: 0px; 
     height: 120px; 
     display: flex; 
@@ -54,5 +54,6 @@ const NavigationTop = styled.div`
 
     &.homepg {
         background-color: transparent; 
+        position: relative; 
     }
 `;

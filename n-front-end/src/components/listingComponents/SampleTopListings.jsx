@@ -1,5 +1,6 @@
 import styled from 'styled-components'; 
 import { useState, useEffect } from 'react'; 
+import PillButton from '../sharedComponents/Buttons/PillButton';
 
 export default function SampleTopListings() {
     const [sample12Data, setSampleData] = useState(); 
@@ -55,6 +56,7 @@ export default function SampleTopListings() {
                     }
                 </CardGrid>
             )}
+            <PillButton name='EXPLORE ALL OUR PROPERTIES' path='/'/>
         </Layout>
     )
 }
@@ -85,7 +87,7 @@ const CardGrid = styled.div`
     justify-content: center; 
     flex-wrap: wrap; 
     gap: 45px; 
-    margin-bottom: 300px; 
+    margin-bottom: 100px; 
 `;
 
 const SingleHouse = styled.div` 
@@ -145,4 +147,4 @@ const Description = styled.div`
     color: var(--corpLightGrey2); 
     overflow: hidden; 
     border-bottom: 2px solid var(--corpLightGrey1); 
-`
+`;
