@@ -1,0 +1,32 @@
+.announcementBanner {
+    background-color: var(--corpYellow);
+    height: 48px; 
+    font-size: 18px; 
+    text-align: center;
+    align-content: center;  
+}
+
+.announcementBanner:hover {
+    background-color: var(--corpYellowHover); 
+}
+
+.navBar {
+    background-color: black; 
+    height: 120px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.navLinks {
+    color: white; 
+    display: flex; 
+    gap: 33px; 
+    margin-right: 30px; 
+    font-size: 1.3rem; 
+}
+
+.footerbox {
+    background-color: black; 
+    height: 680px;
+}

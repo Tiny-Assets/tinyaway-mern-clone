@@ -1,0 +1,45 @@
+.areaSettings {
+    background-image: url(../../../public/heroBG.jpg); 
+    background-size: cover; 
+    background-position: 0px -350px;  
+    height: 912px; 
+}
+
+.mainHeader {
+    color: white; 
+    font-family: 'Work Sans'; 
+    font-size: 64px; 
+    text-align: center; 
+    padding-top: 250px;
+}
+
+.searchBar {
+    color: white; 
+    display: flex; 
+    justify-content: center;
+    padding-top: 30px; 
+}
+
+.searchField {
+    background-color: white; 
+    color: var(--corpDarkGrey2); 
+    width: 220px; 
+    height: 64px; 
+    font-size: 21px;
+    display: flex; 
+    align-items: center;  
+    padding: 0px 30px; 
+    border-right: 1px solid var(--corpLightGrey2); 
+}
+
+#start {    
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+}
+
+#end {
+    background-color: var(--corpYellow); 
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
