@@ -1,8 +1,10 @@
-import type { Metadata } from "next";
-import '@/app/globals.scss'; 
-import AnnouncementBanner from "./components/sharedComponents/AnnouncementBanner";
-import Navbar from "./components/sharedComponents/Navbar/Navbar";
-import FooterBox from "./components/sharedComponents/Footer/FooterBox";
+import '@fontsource-variable/source-sans-3';
+import '@fontsource-variable/work-sans'; 
+import '@fontsource/lato'; 
+import '@/app/globals.css';
+import type { Metadata } from "next"; 
+import AnnouncementBar from './shared-components/AnnouncementBar';
+import Navbar from './shared-components/NavBar';
 
 interface RootLayoutProps {
   children: React.ReactNode; 
@@ -17,10 +19,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
     return (
     <html lang="en">
       <body>
-        <AnnouncementBanner />
+        <AnnouncementBar />
         <Navbar />
-        {children}
-        <FooterBox />
+        { children }
       </body>
     </html>
   );

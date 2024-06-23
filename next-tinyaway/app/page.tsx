@@ -1,4 +1,4 @@
-import SearchArea from "./components/searchComponents/SearchArea";
+import SearchArea from "@/app/homepage-components/searchComponents/SearchArea";
 
 export default function Home() {
   return (
