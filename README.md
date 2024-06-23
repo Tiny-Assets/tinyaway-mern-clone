@@ -1,11 +1,10 @@
 # Tiny-Away Clone MERN-Next
-Testing Tiny Away Clone with MERN / NextJS
+Testing Tiny Away Clone with NextJS
 
 ## General
 - Framework / Stack: MERN
 - Node Version 20.13.1
-- Packages Used: nodemon, dotenv, express, mongodb, mongoose, react-router-dom, font awesome, material ui,
-- React framework created with Vite to stay up to date
+- Packages Used: dotenv, mongodb, mongoose, font awesome, 
 
 - If npm start does not work for Frontend, try running the following
 
