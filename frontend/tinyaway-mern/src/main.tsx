@@ -12,6 +12,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <AnnouncementBar />
       <Navbar />
         <App />
-    </React.StrictMode>,
+    </React.StrictMode>
   </BrowserRouter>
 )

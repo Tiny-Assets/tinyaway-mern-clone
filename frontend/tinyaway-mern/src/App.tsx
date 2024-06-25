@@ -17,11 +17,11 @@ export default function App() {
   return (
     <Routes>
       <Route path='/' element={ <HomePage /> } />
-      <Route path='/giftcards' element={ <GiftCardsPage /> } />
-      <Route path='/tinyhousedestinations' element={ <TinyHouseDestinationsPage /> } />
-      <Route path='/tinyawayescape-grampians' element={ <GrampiansPage /> } />
-      <Route path='/tinyawayescape-lazarus' element={ <LazarusIslandPage /> } />
-      <Route path='/tinystories' element={ <TinyStoriesPage /> } />
+      <Route path='/gift-cards' element={ <GiftCardsPage /> } />
+      <Route path='/tiny-house-destinations' element={ <TinyHouseDestinationsPage /> } />
+      <Route path='/tiny-away-escape-grampians' element={ <GrampiansPage /> } />
+      <Route path='/tiny-away-escape-lazarus' element={ <LazarusIslandPage /> } />
+      <Route path='/tiny-stories' element={ <TinyStoriesPage /> } />
       <Route path='/our-story' element={ <OurStoryPage /> } />
       <Route path='/become-a-host' element={ <BecomeAHostPage /> } />
       <Route path='/contact-us' element={ <ContactUsPage /> } />
