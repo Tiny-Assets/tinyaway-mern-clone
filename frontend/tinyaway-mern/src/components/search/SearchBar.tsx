@@ -1,59 +1,57 @@
 import styled from "styled-components"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
+import { useState } from "react"
+import SearchField from "./SearchField"
+import LocationsSubMenu from "./LocationsSubMenu";
 
 export default function SearchBar() {
+    const [showLocations, setShowLocations] = useState(false); 
+    const [showDates, setShowDates] = useState(false); 
+    const [showGuests, setShowGuests] = useState(false); 
+    const [showRooms, setShowRooms] = useState(false); 
+
+    const toggleLocationMenu = () => {
+        setShowLocations(!showLocations); 
+    }
+    
     return(
-        <Bar>
-            <SearchField className='start'>
-                <p>LOCATION</p>
-                <FontAwesomeIcon icon={ faArrowRight } />
-            </SearchField>
-            <SearchField>
-                <p>DATE</p>
-                <FontAwesomeIcon icon={ faArrowRight } />
-            </SearchField>
-            <SearchField>
-                <p>GUESTS</p>
-                <FontAwesomeIcon icon={ faArrowRight } />
-            </SearchField>
-            <SearchField>
-                <p>ROOMS</p>
-                <FontAwesomeIcon icon={ faArrowRight } />
-            </SearchField>
-            <SearchField className='end'>
-                <p>SEARCH</p>
-            </SearchField>
-        </Bar>
+        <>      
+            <SearchGrid>
+                <SearchField className='start' fieldName='LOCATION' toDo={ toggleLocationMenu } arrow />
+                <SearchField fieldName='DATE' arrow/>
+                <SearchField fieldName='GUESTS' arrow/>
+                <SearchField fieldName='ROOM' arrow/>
+                <SearchField className='end' fieldName='SEARCH' />
+            </SearchGrid>
+            <SubmenuGrid>
+                { showLocations && 
+                    <Sub1>
+                        <LocationsSubMenu/>
+                    </Sub1>
+                }
+            </SubmenuGrid>
+        </>
     )
 }
 
-const Bar = styled.div`
-    display: flex; 
+const SearchGrid = styled.div`
+    display: grid; 
+    grid-template-columns: repeat(5, 225px); 
     justify-content: center; 
-    margin-top: 50px; 
+    align-items: start; 
+    margin-top: 30px; 
 `
-const SearchField = styled.div`
-    background-color: white; 
-    color: var(--corpDarkGrey1); 
-    width: 150px; 
-    font-size: 21px; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    border-right: 1px solid var(--corpLightGrey2); 
-    padding: 18px 52px; 
 
-    &.start{
-        border-top-left-radius: 2rem; 
-        border-bottom-left-radius: 2rem; 
-    }
+const SubmenuGrid = styled.div`
+    display: grid; 
+    grid-template-columns: repeat(45, 25px); 
+    grid-template-rows: repeat(5, 50px); 
+    justify-content: center; 
+    position: relative; 
+    top: -30px;
+    z-index: 0;  
+`
 
-    &.end{
-        background-color: var(--corpYellow); 
-        color: black; 
-        justify-content: center; 
-        border-top-right-radius: 2rem; 
-        border-bottom-right-radius: 2rem; 
-    }
+const Sub1 = styled.div`
+    grid-column-start: 1; 
+    grid-column-end: 10; 
 `
