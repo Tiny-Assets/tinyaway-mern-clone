@@ -27,7 +27,7 @@ const SingleField = styled.div`
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    border-left: 1px solid var(--corpLightGrey2); 
+    border-left: 1px solid var(--corpLightGrey1); 
     padding: 15px 45px; 
     z-index: 1; 
 

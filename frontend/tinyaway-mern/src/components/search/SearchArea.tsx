@@ -1,13 +1,17 @@
 import styled from "styled-components"
 import heroPic from "../../assets/heroBG.jpg"
 import SearchBar from "./SearchBar"
+import { GuestNumberProvider } from "../../contexts/GuestNumberContext"
+import { RoomNumberProvider } from "../../contexts/RoomNumberContext"
 
 export default function SearchArea() {
     return(
-        <HeroSection>
-            <HeroTitle>Book & Experience Amazing <br/> Tiny Houses</HeroTitle>
-            <SearchBar />
-        </HeroSection>
+        <GuestNumberProvider><RoomNumberProvider>
+            <HeroSection>
+                <HeroTitle>Book & Experience Amazing <br/> Tiny Houses</HeroTitle>
+                <SearchBar />
+            </HeroSection>
+            </RoomNumberProvider></GuestNumberProvider>
     )
 }
 
@@ -15,6 +19,7 @@ const HeroSection = styled.div`
     background-image: url(${heroPic}); 
     background-size: cover; 
     background-position-y: -360px; 
+    background-repeat: no-repeat; 
     height: 912px; 
 `
 
