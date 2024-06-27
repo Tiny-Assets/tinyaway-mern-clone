@@ -20,7 +20,7 @@ export default function App() {
       <Route path='/' element={ <HomePage /> } />
       <Route path='/gift-cards' element={ <GiftCardsPage /> } />
       <Route path='/tiny-house-destinations' element={ <TinyHouseDestinationsPage /> } />
-      <Route path='/tiny-house-destinations/listing' element={ <SingleListing />} />
+      <Route path='/tiny-house-destinations/:id' element={ <SingleListing />} />
       <Route path='/tiny-away-escape-grampians' element={ <GrampiansPage /> } />
       <Route path='/tiny-away-escape-lazarus' element={ <LazarusIslandPage /> } />
       <Route path='/tiny-stories' element={ <TinyStoriesPage /> } />

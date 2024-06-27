@@ -37,7 +37,7 @@ export default function PopularListings() {
             <SubTitle>Hear it from our guests. This is the list of tiny houses that we have specially curated for you, based on reviews from our guests who have stayed in them.</SubTitle>
             <CardSection>
                 {demoListings.map((listing, index) => (
-                        <Link to='/tiny-house-destinations/listing' key={ index }>
+                        <Link to={`/tiny-house-destinations/${listing._id}`} key={ index }>
                             <Card>
                                 <ListingImg style={{backgroundImage:`url(${ listing.images.picture_url })`}}/>
                                 <CardHead>
@@ -57,7 +57,7 @@ export default function PopularListings() {
                                 <Description>{ listing.description }</Description>
                                 <IconDrawer> ICON DRAWER </IconDrawer>
                             </Card>
-                        </Link>
+                        </Link> 
                 ))
                 }
             </CardSection>

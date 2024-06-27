@@ -11,3 +11,8 @@ export async function call12() {
   console.log(find12); 
   return find12; 
 }
+
+export async function findListing(listingId) {
+  const findHouse = await client.db("sample_airbnb").collection("listingsAndReviews").findOne({_id: listingId}); 
+  return findHouse; 
+}
