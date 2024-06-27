@@ -18,7 +18,9 @@ export default function Navbar() {
     return(
         <>
             <Navblock>
-                <img src={ talogo } alt='tiny-away-logo' style={{ width: '187px', height: '200px' }}/>
+                <Link to='/'>
+                    <img src={ talogo } alt='tiny-away-logo' style={{ width: '187px', height: '200px' }}/>
+                </Link>
                 <Links>
                     <Link to='/'>HOME</Link>
                     <ChangeParams>EN</ChangeParams>

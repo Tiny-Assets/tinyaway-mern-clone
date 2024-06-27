@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import GiftCardsPage from "./pages/GiftCardsPage";
 import TinyHouseDestinationsPage from "./pages/TinyHouseDestinations"; 
+import SingleListing from "./pages/SingleListing";
 import GrampiansPage from "./pages/GrampiansPage";
 import LazarusIslandPage from "./pages/LazarusIslandPage";
 import TinyStoriesPage from "./pages/TinyStoriesPage";
@@ -19,6 +20,7 @@ export default function App() {
       <Route path='/' element={ <HomePage /> } />
       <Route path='/gift-cards' element={ <GiftCardsPage /> } />
       <Route path='/tiny-house-destinations' element={ <TinyHouseDestinationsPage /> } />
+      <Route path='/tiny-house-destinations/listing' element={ <SingleListing />} />
       <Route path='/tiny-away-escape-grampians' element={ <GrampiansPage /> } />
       <Route path='/tiny-away-escape-lazarus' element={ <LazarusIslandPage /> } />
       <Route path='/tiny-stories' element={ <TinyStoriesPage /> } />

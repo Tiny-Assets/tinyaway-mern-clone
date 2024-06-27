@@ -1,5 +1,7 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import PillButton from "../PillButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
@@ -35,28 +37,31 @@ export default function PopularListings() {
             <SubTitle>Hear it from our guests. This is the list of tiny houses that we have specially curated for you, based on reviews from our guests who have stayed in them.</SubTitle>
             <CardSection>
                 {demoListings.map((listing, index) => (
-                        <Card key={ index }>
-                            <ListingImg style={{backgroundImage:`url(${ listing.images.picture_url })`}}/>
-                            <CardHead>
-                                <div>
-                                    <CardTitle>{ listing.name.toUpperCase() }</CardTitle>
-                                    <CardSub>{ listing.address.street }</CardSub>
-                                    <ReviewPart>
-                                        <FontAwesomeIcon icon={ faStar } style={{ color:'orange' }}/>
-                                        <p>{ listing.review_scores.review_scores_rating / 20 }</p>
-                                        <p style={{ color:'var(--corpLightGrey2' }}>({ listing.reviews.length })</p>
-                                    </ReviewPart>
-                                </div>
-                                <div>
-                                    <Price>RM{ listing.price.$numberDecimal }<br/>/night</Price>
-                                </div>
-                            </CardHead>
-                            <Description>{ listing.description }</Description>
-                            <IconDrawer> ICON DRAWER </IconDrawer>
-                        </Card>
+                        <Link to='/tiny-house-destinations/listing' key={ index }>
+                            <Card>
+                                <ListingImg style={{backgroundImage:`url(${ listing.images.picture_url })`}}/>
+                                <CardHead>
+                                    <div>
+                                        <CardTitle>{ listing.name.toUpperCase() }</CardTitle>
+                                        <CardSub>{ listing.address.street }</CardSub>
+                                        <ReviewPart>
+                                            <FontAwesomeIcon icon={ faStar } style={{ color:'orange' }}/>
+                                            <p>{ listing.review_scores.review_scores_rating / 20 }</p>
+                                            <p style={{ color:'var(--corpLightGrey2' }}>({ listing.reviews.length })</p>
+                                        </ReviewPart>
+                                    </div>
+                                    <div>
+                                        <Price>RM{ listing.price.$numberDecimal }<br/>/night</Price>
+                                    </div>
+                                </CardHead>
+                                <Description>{ listing.description }</Description>
+                                <IconDrawer> ICON DRAWER </IconDrawer>
+                            </Card>
+                        </Link>
                 ))
                 }
             </CardSection>
+            <PillButton className="noChange" buttonName="EXPLORE ALL OUR PROPERTIES" path="/tiny-house-destinations" />
         </TopListings>
     )
 }
@@ -82,7 +87,7 @@ const CardSection = styled.div`
     flex-wrap: wrap; 
     justify-content: center; 
     gap: 30px 20px; 
-    margin-top: 50px; 
+    margin: 50px; 
 `
 
 const Card = styled.div`

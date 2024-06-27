@@ -38,4 +38,11 @@ const Pill = styled.div`
             color: black; 
         }
     }
+
+    &.noChange {
+        background-color: white; 
+        color: var(--corpLightGrey2);
+        display: inline-block; 
+        border: 1px solid var(--corpLightGrey2);  
+    }
 `
