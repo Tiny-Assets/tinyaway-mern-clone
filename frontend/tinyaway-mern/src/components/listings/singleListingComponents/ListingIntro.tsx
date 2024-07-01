@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import PillTag from "../../PillTag";
+import PillTag from "../../sharedcomponents/PillTag";
 
 interface ListingIntroProps {
     name: string; 

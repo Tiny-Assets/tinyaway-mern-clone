@@ -1,9 +1,9 @@
 import styled from "styled-components"
 import { Link } from "react-router-dom";
 
-interface ButtonProps {
+interface ButtonProps { 
+    buttonName: string;
     className?: string; 
-    buttonName: string; 
     path?: string; 
     toDo?: () => void; 
     }

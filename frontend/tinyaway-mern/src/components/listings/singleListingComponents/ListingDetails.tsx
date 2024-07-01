@@ -48,7 +48,7 @@ export default function ListingDetails({ listingDetails }: ListingDetailsProps){
                 </SubSection>
             </div>
         </MainContainer>
-        <BookingBar />
+        <BookingBar title={ listingDetails.name.toUpperCase() } price={ listingDetails.price.$numberDecimal }/>
     </>
     )
 }

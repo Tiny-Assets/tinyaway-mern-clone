@@ -1,5 +1,5 @@
 export const toggleState = (setStateFunction) => {
-    return (e) => {
+    return () => {
         setStateFunction(prevState => !prevState);
     };
 };
