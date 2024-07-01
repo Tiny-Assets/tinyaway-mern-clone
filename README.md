@@ -1,8 +1,6 @@
 # Tiny-Away Clone MERN-Next
 Testing Tiny Away Clone with MERN
 
-hello from chloe
-
 ## General
 - Framework / Stack: MERN
 - Node Version 20.13.1
