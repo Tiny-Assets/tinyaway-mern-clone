@@ -2,11 +2,14 @@ import styled from "styled-components"
 
 interface PillTagProps {
     tagName: string; 
+    className?: string; 
 }
 
-export default function PillTag({ tagName }: PillTagProps) {
+export default function PillTag({ tagName, className }: PillTagProps) {
     return(
-        <PillDisplay>{ tagName }</PillDisplay>
+        <PillDisplay className={ className }>
+            { tagName }
+        </PillDisplay>
     )
 }
 
@@ -15,4 +18,10 @@ const PillDisplay = styled.div`
     background-color: var(--corpYellow); 
     padding: 5px 25px; 
     border-radius: 2rem; 
+
+    &.plainTag {
+        background-color: white; 
+        font-size: 21px; 
+        border: 1px solid var(--corpLightGrey2); 
+    }
 `
