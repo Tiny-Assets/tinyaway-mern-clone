@@ -17,17 +17,23 @@ Testing Tiny Away Clone with MERN
 ```
 
 - Start the backend server on localhost:4000
-    
+
+```
     cd backend
     npm run dev
+```
 
 - Then, run the following command to launch development server (Frontend)
-    
+
+```    
     npm run dev 
+```
 
-If it not work, try running
+If it does not work, try running
 
+```
     npm audit fix --force
+```
 
 ## dotenv
 - Backend Port: 4000
