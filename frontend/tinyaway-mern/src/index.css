@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 :root {
   --corpYellow: #FFF5AC; 
@@ -24,6 +25,12 @@ h1 {
   color: var(--corpDarkGrey1); 
   font-family: 'Work Sans', sans-serif; 
   font-size: 64px; 
+  font-weight: 600; 
+}
+
+h2 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 48px;
   font-weight: 600; 
 }
 
