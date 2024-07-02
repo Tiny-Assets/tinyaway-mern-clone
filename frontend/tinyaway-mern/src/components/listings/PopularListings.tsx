@@ -77,6 +77,7 @@ const SectionTitle = styled.h1`
 
 const SubTitle = styled.div`
     font-size: 21px; 
+    margin-bottom: 50px; 
 `
 
 const CardSection = styled.div`
@@ -84,7 +85,6 @@ const CardSection = styled.div`
     flex-wrap: wrap; 
     justify-content: center; 
     gap: 30px 20px; 
-    margin: 50px; 
 `
 
 const Card = styled.div`

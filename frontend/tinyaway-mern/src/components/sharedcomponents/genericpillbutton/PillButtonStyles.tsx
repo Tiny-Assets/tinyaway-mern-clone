@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Pill = styled.div`
     background-color: var(--corpYellow); 
     color: var(--corpDarkGrey2); 
+    display: inline-block;
     border-radius: 2rem; 
     padding: 10px 20px; 
 
@@ -22,9 +23,9 @@ export const Pill = styled.div`
     }
 
     &.noChange {
-        background-color: white; 
+        background-color: transparent; 
         color: var(--corpLightGrey2);
-        display: inline-block; 
+        margin-top: 50px; 
         border: 1px solid var(--corpLightGrey2);  
     }
 `

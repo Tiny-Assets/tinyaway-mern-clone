@@ -1,5 +1,5 @@
-import { FooterBox, FooterBottom, FooterTop, LogoContainer, LogoBox, Description, LinkSection, BottomTitle } from './footer/FooterStyles';
-import Logo from '../../assets/talogo.png'; 
+import { FooterBox, FooterBottom, FooterTop, LogoContainer, LogoBox, Description, LinkSection, BottomTitle } from './FooterStyles';
+import Logo from '../../../assets/talogo.png'; 
 import FooterLink from "./FooterLinks";
 import FooterContactCard from "./FooterContactCard";
 

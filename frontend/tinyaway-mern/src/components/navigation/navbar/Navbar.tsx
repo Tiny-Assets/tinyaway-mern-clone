@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { useState } from 'react';
-import talogo from '../../assets/talogo.png'; 
-import PillButton from '../sharedcomponents/genericpillbutton/PillButton';
+import talogo from '../../../assets/talogo.png'; 
+import PillButton from '../../sharedcomponents/genericpillbutton/PillButton';
 import Burger from './Burger';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleUser } from '@fortawesome/free-regular-svg-icons';
