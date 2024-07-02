@@ -1,6 +1,6 @@
 import styled from "styled-components"; 
 import { useState } from "react";
-import { toggleState } from "../../../utilitycomponents/toggleState";
+import { toggleState } from "../../../sharedutilities/toggleState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 

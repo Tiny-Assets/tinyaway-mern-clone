@@ -1,4 +1,4 @@
-import { NewsletterSection, NewsletterImage, NewsletterForm, EmailPill } from './newsletterform/NewsletterStyles';
+import { NewsletterSection, NewsletterImage, NewsletterForm, EmailPill } from './NewsletterStyles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 

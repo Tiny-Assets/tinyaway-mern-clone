@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import DatePicker from "./Datepicker";
 import ConfirmGuestCount from "./ConfirmGuestCount";
-import AddToCartPill from "../../sharedcomponents/AddToCartPill";
+import AddToCartPill from "../../sharedcomponents/addtocartpill/AddToCartPill";
 
 interface BookingBarProps {
     title: string; 

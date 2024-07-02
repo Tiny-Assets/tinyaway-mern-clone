@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import PillTag from "../../sharedcomponents/PillTag";
+import DisplayPill from "../../sharedcomponents/displaypill/DisplayPill";
 
 interface ListingIntroProps {
     name: string; 
@@ -9,7 +9,6 @@ interface ListingIntroProps {
 
 export default function ListingIntro({ name, street, description }: ListingIntroProps ) {
     
-
     return(
         <>
         <IntroSection>
@@ -21,14 +20,14 @@ export default function ListingIntro({ name, street, description }: ListingIntro
                 <ListingTitle>{ name }</ListingTitle>
                 <ContentBox>
                     <Pills>
-                        <PillTag tagName='FEATURED' />
-                        <PillTag tagName='PET-FRIENDLY' />
+                        <DisplayPill tagName='FEATURED' />
+                        <DisplayPill tagName='PET-FRIENDLY' />
                     </Pills>
                     <Description>{ description }</Description>
                     <Pills className='plainPills'>
-                        <PillTag className='plainTag' tagName='BUCKET LIST' />
-                        <PillTag className='plainTag' tagName='GIFT CARD' />
-                        <PillTag className='plainTag' tagName='SHARE' />
+                        <DisplayPill className='plainTag' tagName='BUCKET LIST' />
+                        <DisplayPill className='plainTag' tagName='GIFT CARD' />
+                        <DisplayPill className='plainTag' tagName='SHARE' />
                     </Pills>
             </ContentBox>
             </div>
@@ -51,10 +50,9 @@ const Street = styled.div`
     font-weight: 600; 
 `
 
-const ListingTitle = styled.div`
-    font-family; 'Work Sans'; 
-    font-size: 64px; 
+const ListingTitle = styled.h1`
     font-weight: 800; 
+    line-height: 4.5rem; 
 `
 
 const Description = styled.div`

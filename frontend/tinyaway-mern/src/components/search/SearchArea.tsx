@@ -27,4 +27,5 @@ const HeroTitle = styled.h1`
     color: white; 
     text-align: center;
     padding-top: 230px;
+    font-weight: 700; 
 `

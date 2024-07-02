@@ -1,24 +1,6 @@
-import styled from "styled-components"
-import { Link } from "react-router-dom";
+import styled from "styled-components";
 
-interface ButtonProps { 
-    buttonName: string;
-    className?: string; 
-    path?: string; 
-    toDo?: () => void; 
-    }
-
-export default function PillButton({ className, buttonName, path, toDo }: ButtonProps) {
-    return(
-        <Link to={ path }>
-            <Pill className={ className } onClick={ toDo }>
-                { buttonName }
-            </Pill>
-        </Link>
-    )
-}
-
-const Pill = styled.div`
+export const Pill = styled.div`
     background-color: var(--corpYellow); 
     color: var(--corpDarkGrey2); 
     border-radius: 2rem; 

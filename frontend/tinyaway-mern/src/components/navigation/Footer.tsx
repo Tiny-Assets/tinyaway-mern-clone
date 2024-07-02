@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { FooterBox, FooterBottom, FooterTop, LogoContainer, LogoBox, Description, LinkSection, BottomTitle } from './footer/FooterStyles';
 import Logo from '../../assets/talogo.png'; 
 import FooterLink from "./FooterLinks";
 import FooterContactCard from "./FooterContactCard";
@@ -44,58 +44,3 @@ export default function Footer() {
         </FooterBox>
     )
 }
-
-const FooterBox = styled.div`
-    background-color: black; 
-    color: white; 
-    height: 750px; 
-    padding: 0px 130px; 
-`
-
-const FooterTop = styled.div`
-    display: flex; 
-    background-color: black; 
-    border-bottom: 1px solid var(--corpDarkGrey1); 
-`
-
-const FooterBottom = styled.div`
-    display: flex; 
-    gap: 100px; 
-    margin-top: 50px; 
-`
-
-const LinkSection = styled.div`
-    width: 700px; 
-    display: flex; 
-    gap: 150px; 
-`
-const BottomTitle = styled.div`
-    font-size: 28px;
-    font-weight: 600; 
-    margin-bottom: 50px; 
-`
-
-const LogoContainer = styled.div`
-    display: flex; 
-    gap: 100px; 
-    padding-right: 100px; 
-`
-
-const LogoBox = styled.div`
-    background-size: cover; 
-    height: 180px; 
-    width: 250px; 
-    padding-bottom: 50px; 
-    overflow: hidden; 
-`
-
-const Description = styled.div`
-    width: 750px; 
-    font-size: 21px; 
-    font-weight: 300; 
-    text-align: left; 
-    align-content: center;
-    margin: 50px 0px;  
-    padding-left: 100px; 
-    border-left: 1px solid var(--corpDarkGrey1); 
-`

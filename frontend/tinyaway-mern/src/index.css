@@ -21,10 +21,10 @@ body {
 }
 
 h1 {
+  color: var(--corpDarkGrey1); 
   font-family: 'Work Sans', sans-serif; 
   font-size: 64px; 
   font-weight: 600; 
-  color: var(--corpDarkGrey1); 
 }
 
 a, a:visited {
