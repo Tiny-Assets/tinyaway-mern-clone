@@ -24,8 +24,6 @@ const HeroSection = styled.div`
 `
 
 const HeroTitle = styled.h1`
-    font-family: 'Work Sans'; 
-    font-size: 64px; 
     color: white; 
     text-align: center;
     padding-top: 230px;

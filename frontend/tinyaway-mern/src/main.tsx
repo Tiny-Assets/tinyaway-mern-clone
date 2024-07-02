@@ -6,7 +6,7 @@ import './index.css'
 import AnnouncementBar from "./components/navigation/AnnouncementBar.tsx"; 
 import Navbar from "./components/navigation/Navbar.tsx";
 import Footer from './components/navigation/Footer.tsx'
-import IgFeedApi from './components/sharedcomponents/IgFeedApi.tsx'
+import IgFeedApi from './components/sharedcomponents/instagramfeed/IgFeedApi.tsx'
 import NewsletterSignUp from './components/sharedcomponents/NewsletterSignUp.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

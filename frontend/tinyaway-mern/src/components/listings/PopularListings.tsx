@@ -71,11 +71,8 @@ const TopListings = styled.div`
     margin: 50px; 
 `
 
-const SectionTitle = styled.div`
-    font-family: "Work Sans";
+const SectionTitle = styled.h1`
     font-weight: 600; 
-    font-size: 64px; 
-    color: var(--corpDarkGrey1); 
 `
 
 const SubTitle = styled.div`
