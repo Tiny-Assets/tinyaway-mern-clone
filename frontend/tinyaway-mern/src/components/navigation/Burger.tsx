@@ -62,6 +62,7 @@ const OpenBurger = styled.div`
     position: fixed; 
     right: 0px; 
     top: 0px; 
+    z-index: 2; 
 `
 
 const CloseMenu = styled.div`

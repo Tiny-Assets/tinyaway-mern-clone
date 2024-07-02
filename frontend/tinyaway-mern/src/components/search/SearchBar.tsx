@@ -7,13 +7,13 @@ import RoomSubMenu from "./RoomSubMenu";
 
 export default function SearchBar() {
     const [showLocations, setShowLocations] = useState(false); 
-    const [showDates, setShowDates] = useState(false); 
+    // const [showDates, setShowDates] = useState(false); 
     const [showGuests, setShowGuests] = useState(false); 
     const [showRooms, setShowRooms] = useState(false); 
 
     const toggleLocationMenu = () => {
         setShowLocations(!showLocations); 
-        setShowDates(false); 
+        // setShowDates(false); 
         setShowGuests(false); 
         setShowRooms(false); 
     }
@@ -22,14 +22,14 @@ export default function SearchBar() {
         setShowGuests(!showGuests); 
         setShowRooms(false); 
         setShowLocations(false); 
-        setShowDates(false); 
+        // setShowDates(false); 
     }
 
     const toggleRoomMenu = () => {
         setShowRooms(!showRooms); 
         setShowGuests(false); 
         setShowLocations(false); 
-        setShowDates(false); 
+        // setShowDates(false); 
     }
     
     return(

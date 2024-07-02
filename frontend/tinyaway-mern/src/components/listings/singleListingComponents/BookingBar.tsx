@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import DatePicker from "./Datepicker";
 import ConfirmGuestCount from "./ConfirmGuestCount";
+import AddToCartPill from "../../sharedcomponents/AddToCartPill";
 
 interface BookingBarProps {
     title: string; 
@@ -17,7 +18,7 @@ export default function BookingBar({ title, price }: BookingBarProps) {
                 </TitleAndPrice>
                 <DatePicker />
                 <ConfirmGuestCount />
-                <ConfirmGuestCount />
+                <AddToCartPill />
             </BookThisHouse>
         </>
     )

@@ -4,15 +4,17 @@ Testing Tiny Away Clone with MERN
 ## General
 - Framework / Stack: MERN
 - Node Version 20.13.1
-- Packages Used: nodejs, npm, dotenv, mongodb, mongoose, font awesome, helmet
+- Packages Used: nodejs, npm, dotenv, mongodb, mongoose, font awesome, helmet, styled components
 
 ## Launch local development server 
 - After cloning the repo, open the source code in your IDE 
 - Ensure that you have installed node and npm  
 - Run the following commands in your terminal 
-    
+
+```
     npm install 
     npm update
+```
 
 - Start the backend server on localhost:4000
     

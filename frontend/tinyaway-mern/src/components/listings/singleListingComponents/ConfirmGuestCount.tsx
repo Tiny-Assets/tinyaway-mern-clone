@@ -1,7 +1,6 @@
 import styled from "styled-components"; 
-import { useState, useContext } from "react";
+import { useState } from "react";
 import { toggleState } from "../../utilitycomponents/toggleState";
-import GuestSubMenu from "../../search/GuestsSubMenu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
@@ -15,7 +14,7 @@ export default function ConfirmGuestCount() {
             <FontAwesomeIcon icon={ faCaretDown } />
         </ConfirmGuestBar>
         { adjustGuests && 
-            <div>BOO HOO!</div>
+            <p>BOO HOO</p>
         }
     </>
     )
