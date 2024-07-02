@@ -26,6 +26,7 @@ Testing Tiny Away Clone with MERN
 - Then, run the following command to launch development server (Frontend)
 
 ```    
+    cd frontend/tinyaway-mern
     npm run dev 
 ```
 
