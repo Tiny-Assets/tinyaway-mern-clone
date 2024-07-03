@@ -18,12 +18,13 @@ export const IgRef = styled.div`
     gap: 10px; 
     font-size: 24px; 
     font-weight: 800;
-    margin-bottom: 50px;  
+    margin-bottom: 20px;  
 `
 
 export const IgFeedRow = styled.div`
+    width: 100vw; 
     display: flex; 
-    gap: 9px;  
+    justify-content: space-between; 
     margin-bottom: 10px; 
 `
 

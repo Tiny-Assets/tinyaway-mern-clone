@@ -1,42 +1,46 @@
 import styled from "styled-components"
 import { useContext, useState, useEffect } from "react"
-import { RoomNumberContext, RoomNumberProvider } from "../../contexts/RoomNumberContext";
-import RoomCalculator from "./RoomCalculator";
+import { GuestNumberContext } from "../../../contexts/GuestNumberContext";
+import GuestCalculator from "./searchutilities/GuestCalculator";
 
-export default function RoomSubMenu() {
-    const { roomCount, famRoomCount, grpRoomCount } = useContext(RoomNumberContext); 
+interface GuestSubMenuProps {
+    toggleMenu: () => void; 
+}
 
+export default function GuestSubMenu({ toggleMenu }: GuestSubMenuProps) {
+    const { guestCount, setGuestCount, adultCount, setAdultCount, kidsCount, setKidsCount } = useContext(GuestNumberContext); 
+    
     return(
         <>
-            <RoomBox>
+            <GuestsBox>
                 <Section>
-                    <p>{ roomCount } ROOMS</p>
+                    <p>{ guestCount } PEOPLE</p>
                 </Section>
                 <Section>
                     <div>
-                        <p>Room</p>
-                        <Subtitle>Family Travelers</Subtitle>
+                        <p>Adults</p>
+                        <Subtitle>Age 13 and above</Subtitle>
                     </div>
                     <div>
-                        <RoomCalculator subField="family" />
+                        <GuestCalculator subField="adults" />
                     </div>
                 </Section>
                 <Section>
                     <div>
-                        <p>Room</p>
-                        <Subtitle>Group Travelers</Subtitle>
+                        <p>Children</p>
+                        <Subtitle>Between 2 & 12 years old</Subtitle>
                     </div>
                     <div>
-                        <RoomCalculator subField="group"/>
+                        <GuestCalculator subField="kids"/>
                     </div>
                 </Section>
-                <p className='close'>CLOSE</p>
-            </RoomBox>
+                <p className='close' onClick={ toggleMenu }>CLOSE</p>
+            </GuestsBox>
         </>
     )
 }
 
-const RoomBox = styled.div`
+const GuestsBox = styled.div`
     background-color: white;
     color: var(--corpDarkGrey2); 
     font-size: 21px; 
@@ -54,7 +58,6 @@ const Section = styled.div`
     justify-content: space-between; 
     align-items: center; 
     padding: 10px 20px; 
-    // border: 1px solid red; 
 `
 
 const Subtitle = styled.div`

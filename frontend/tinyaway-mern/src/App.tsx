@@ -13,6 +13,7 @@ import FaqPoliciesPage from "./pages/FaqPoliciesPage";
 import BlogPage from "./pages/BlogPage";
 import LoginPage from "./pages/LoginPage";
 import BookYourStayPage from "./pages/BookYourStayPage";
+import SearchResults from "./pages/SearchResultsPage";
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
       <Route path='/blog' element={ <BlogPage /> } />
       <Route path='/login' element={ <LoginPage /> } />
       <Route path='/book-your-stay' element={ <BookYourStayPage /> } />
+      <Route path='/search-results' element={ <SearchResults /> } />
     </Routes>
   )
 }

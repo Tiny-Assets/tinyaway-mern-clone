@@ -116,7 +116,8 @@ const CardHead = styled.div`
 
 const CardTitle = styled.div`
     font-size: 23px;  
-    text-align: left; 
+    text-align: left;
+    width: 300px;  
     height: 24px; 
     overflow: hidden;
 `
