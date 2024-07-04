@@ -67,6 +67,7 @@ export const SingleField = styled.div`
     }
 
     &.pill {
+        border: none;
         border-radius: 2rem; 
         padding: 10px 40px; 
     }

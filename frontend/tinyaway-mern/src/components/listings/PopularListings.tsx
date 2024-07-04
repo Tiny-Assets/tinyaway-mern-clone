@@ -1,9 +1,8 @@
-import styled from "styled-components";
+import { TopListings, SectionTitle, SubTitle, CardSection } from "./ListingStyles";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import PillButton from "../sharedcomponents/genericpillbutton/PillButton";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import SingleListingCard from "./SingleListingCard";
 
 export default function PopularListings() {
     const url = "http://localhost:4000/api/list12"; 
@@ -38,27 +37,17 @@ export default function PopularListings() {
             <CardSection>
                 {demoListings.map((listing, index) => (
                         <Link to={`/tiny-house-destinations/${listing._id}`} key={ index }>
-                            <Card>
-                                <ListingImg style={{backgroundImage:`url(${ listing.images.picture_url })`}}/>
-                                <CardHead>
-                                    <div>
-                                        <CardTitle>{ listing.name.toUpperCase() }</CardTitle>
-                                        <CardSub>{ listing.address.street }</CardSub>
-                                        <ReviewPart>
-                                            <FontAwesomeIcon icon={ faStar } style={{ color:'orange' }}/>
-                                            <p>{ listing.review_scores.review_scores_rating / 20 }</p>
-                                            <p style={{ color:'var(--corpLightGrey2' }}>({ listing.reviews.length })</p>
-                                        </ReviewPart>
-                                    </div>
-                                    <div>
-                                        <Price>RM{ listing.price.$numberDecimal }<br/>/night</Price>
-                                    </div>
-                                </CardHead>
-                                <Description>{ listing.description }</Description>
-                                <IconDrawer> ICON DRAWER </IconDrawer>
-                            </Card>
+                            <SingleListingCard
+                                imageUrl={ listing.images.picture_url }
+                                name={ listing.name.toUpperCase() }
+                                street={ listing.address.street }
+                                rating={ listing.review_scores.review_scores_rating }
+                                reviewCount={ listing.reviews.length }
+                                price={ listing.price.$numberDecimal }
+                                houseDescription={ listing.description }
+                            />                                
                         </Link> 
-                ))
+                    ))
                 }
             </CardSection>
             <PillButton className="noChange" buttonName="EXPLORE ALL OUR PROPERTIES" path="/tiny-house-destinations" />
@@ -66,95 +55,3 @@ export default function PopularListings() {
     )
 }
 
-const TopListings = styled.div`
-    text-align: center; 
-    margin: 50px; 
-`
-
-const SectionTitle = styled.h1`
-    font-weight: 600; 
-`
-
-const SubTitle = styled.div`
-    font-size: 21px; 
-    margin-bottom: 50px; 
-`
-
-const CardSection = styled.div`
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 30px 20px; 
-`
-
-const Card = styled.div`
-    background-color: white; 
-    height: 850px;
-    width: 500px;  
-    display: flex; 
-    flex-direction: column; 
-    border: 1px solid var(--corpLightGrey1); 
-    border-radius: 1rem; 
-    overflow: hidden; 
-`
-
-const ListingImg = styled.div`
-    height: 501px; 
-    width: 530px; 
-    background-size: cover; 
-`
-
-const CardHead = styled.div`
-    display: flex; 
-    justify-content: space-between; 
-    align-items: flex-start; 
-    font-family: "Work Sans"; 
-    font-weight: 500;
-    padding: 5px 20px; 
-    border-bottom: 1px solid var(--corpLightGrey1); 
-`
-
-const CardTitle = styled.div`
-    font-size: 23px;  
-    text-align: left;
-    width: 300px;  
-    height: 24px; 
-    overflow: hidden;
-`
-
-const CardSub = styled.div`
-    font-size: 16px;  
-    text-align: left; 
-    margin-top: 2px; 
-`
-
-const Price = styled.div`
-    font-family: "Work Sans";
-    font-size: 16px; 
-    text-align: right; 
-    margin-top: 3px; 
-`
-
-const ReviewPart = styled.div`
-    display: flex;
-    gap: 5px; 
-    margin-top: 5px;  
-    margin-bottom: 5px; 
-`
-const Description = styled.div`
-    color: var(--corpLightGrey2);  
-    height: 150px; 
-    font-size: 21px; 
-    text-align: left; 
-    padding: 15px; 
-    overflow: hidden; 
-`
-
-const IconDrawer = styled.div`
-    height: 66px; 
-    align-content: center; 
-    border-top: 1px solid var(--corpLightGrey1); 
-    border-bottom-left-radius: 1rem; 
-    border-bottom-right-radius: 1rem; 
-    margin-top: auto; 
-`

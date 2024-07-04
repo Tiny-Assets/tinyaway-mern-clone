@@ -9,11 +9,20 @@ interface ButtonProps {
     }
 
 export default function PillButton({ className, buttonName, path, toDo }: ButtonProps) {
-    return(
-        <Link to={ path }>
-            <Pill className={ className } onClick={ toDo }>
-                { buttonName }
-            </Pill>
-        </Link>
-    )
+    return (
+        <>
+            {path ? (
+                <Link to={path}>
+                    <Pill className={className} onClick={toDo}>
+                        {buttonName}
+                    </Pill>
+                </Link>
+            ) : (
+                <Pill className={className} onClick={toDo}>
+                    {buttonName}
+                </Pill>
+            )}
+        </>
+    );
 }
+    

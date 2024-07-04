@@ -8,9 +8,9 @@ interface SearchFieldProps {
     toDo?: () => void; 
     arrow?: boolean; 
 }
-export default function SearchField({ className, fieldName, toDo, arrow }: SearchFieldProps) {
+export default function SearchField({ className, fieldName, toDo, arrow, queryString }: SearchFieldProps) {
     return(
-        <SingleField className={ className } onClick={ toDo }>
+        <SingleField className={ className } onClick={ toDo } >
             <p>{ fieldName }</p>
             { arrow &&
                 <FontAwesomeIcon icon={ faArrowRight } />

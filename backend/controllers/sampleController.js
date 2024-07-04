@@ -16,3 +16,8 @@ export async function findListing(listingId) {
   const findHouse = await client.db("sample_airbnb").collection("listingsAndReviews").findOne({_id: listingId}); 
   return findHouse; 
 }
+
+export async function findSearchResults(query) {
+  const searchResults = await client.db("sample_airbnb").collection("listingsAndReviews").find(query).toArray();
+  return searchResults; 
+}

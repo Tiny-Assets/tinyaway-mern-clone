@@ -3,7 +3,9 @@ import styled from "styled-components";
 export const Pill = styled.div`
     background-color: var(--corpYellow); 
     color: var(--corpDarkGrey2); 
+    font-size: 21px; 
     display: inline-block;
+    align-content: center; 
     border-radius: 2rem; 
     padding: 10px 20px; 
 
