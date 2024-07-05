@@ -18,7 +18,7 @@ export default function ReviewSection() {
             <div onClick={ toggleReview }>
                 { reviewSlider === 1 ? (
                     <>
-                        <ReviewSectionStyles>
+                        <ReviewSectionStyles onClick={ toggleReview }>
                             <ReviewImage>
                                 <img src={ demoImg1 } alt='review-image' />
                             </ReviewImage>

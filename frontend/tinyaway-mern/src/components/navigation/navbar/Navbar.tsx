@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { Navblock, Links, ChangeParams } from './NavbarBurgerStyles';
 import { useState } from 'react';
 import talogo from '../../../assets/talogo.png'; 
 import PillButton from '../../sharedcomponents/genericpillbutton/PillButton';
@@ -19,7 +19,7 @@ export default function Navbar() {
         <>
             <Navblock>
                 <Link to='/'>
-                    <img src={ talogo } alt='tiny-away-logo' style={{ width: '187px', height: '200px' }}/>
+                    <img src={ talogo } alt='tiny-away-logo' style={{ width: '187px', height: '200px', marginLeft:'45px' }}/>
                 </Link>
                 <Links>
                     <Link to='/'>HOME</Link>
@@ -39,25 +39,3 @@ export default function Navbar() {
         </>    
     )
 }
-
-const Navblock = styled.div`
-    background-color: black; 
-    display: flex; 
-    height: 120px; 
-    align-items: center; 
-    justify-content: space-between; 
-    padding: 0px 45px; 
-`
-
-const Links = styled.div`
-    color: white; 
-    display: flex; 
-    gap: 30px; 
-    align-items: center; 
-    font-size: 21px; 
-`
-
-const ChangeParams = styled.div`
-    background-color: black; 
-    color: white; 
-`

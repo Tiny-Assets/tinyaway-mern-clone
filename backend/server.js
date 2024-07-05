@@ -1,7 +1,8 @@
 import './database.js'; 
 import express from 'express'; 
 import cors from 'cors'; 
-import { call12, findListing, findSearchResults } from './controllers/sampleController.js';
+import { tinyAwayListings, tinyAwayListingSummary, getListingDetails, findListing, findSearchResults, getHousePictures,
+         getAmenity } from './controllers/listingsController.js';
 
 const app = express(); 
 const PORT = process.env.PORT || 4000; 
@@ -20,19 +21,57 @@ app.get('/', (req, res) => {
   res.send('Testing Now'); 
 }); 
 
-// Get 12 listings
-app.get('/api/list12', async (req, res) => {
+// GET 12 TinyAway Listings (Generic For Now)
+app.get('/api/tinyaway12', async (req, res) => {
   try {
-    const result = await call12(); 
+    const result = await tinyAwayListings(); 
     res.json(result)
 } catch (error) {
-  // Handle errors appropriately
   console.error(error);
-  res.status(500).send('An error occurred');
+  res.status(500).send('Tinyaway Mongo Failed');
 }
 }); 
 
-// Find ONE specific listing
+// GET ONE specific TinyAway Listing Summary
+app.get('/api/houseSummary', async (req, res) => {
+  const listingId = req.query.listingId; 
+
+  try {
+    const details = await tinyAwayListingSummary(listingId); 
+    res.json(details);
+  } catch (error) {
+    console.error(error); 
+    res.status(500).send('Tinyaway Summary Mongo Failed'); 
+  }
+}); 
+
+// GET ONE specific TinyAway Listing Full Details
+app.get('/api/houseDetails', async (req, res) => {
+  const listingId = req.query.listingId; 
+
+  try {
+    const details = await getListingDetails(listingId); 
+    res.json(details);
+  } catch (error) {
+    console.error(error); 
+    res.status(500).send('Tinyaway Details Mongo Failed'); 
+  }
+}); 
+
+// GET IMAGES of a single TinyAway Listing
+app.get('/api/housePictures', async (req, res) => {
+  const listingId = req.query.listingId; 
+
+  try {
+    const images = await getHousePictures(listingId); 
+    res.json(images); 
+  } catch (error) {
+    console.error(error); 
+    res.status(500).send('Image Fetching Failed'); 
+  }
+});
+
+// GET ONE specific listing
 app.get('/api/findHouse', async (req, res) => {
   const listingId = req.query.listingId; 
   
@@ -42,6 +81,19 @@ app.get('/api/findHouse', async (req, res) => {
 } catch (error) {
     console.error(error);
     res.status(500).send('An error occurred');
+}
+}); 
+
+// GET List of amenities for one tiny house 
+app.get('/api/findamenities', async (req, res) => {
+  const amenityId = req.query.amenityId;
+
+  try {
+    const result = await getAmenity(amenityId);
+    res.json(result);  
+} catch (error) {
+    console.error(error);
+    res.status(500).send('No such amenity');
 }
 }); 
 
@@ -69,5 +121,5 @@ app.get('/api/search', async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).send('An error occurred');
-}
+  }
 });

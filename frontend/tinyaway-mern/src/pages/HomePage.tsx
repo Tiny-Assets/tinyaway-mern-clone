@@ -1,5 +1,5 @@
 import SearchArea from "../components/search/SearchArea"
-import PopularListings from "../components/listings/PopularListings.tsx"
+import TinyAwayListings from "../components/listings/grouplistingcomponents/TinyAwayListings.tsx"
 import TinyStoriesSection from "../components/tinystories/TinyHouseStoriesSection.tsx"
 import TravelInspoSection from "../components/travelinspirations/TravelInspoSection.tsx"
 import ReviewSection from "../components/reviewsection/ReviewSection.tsx"
@@ -8,7 +8,7 @@ export default function HomePage() {
     return(
         <>
             <SearchArea />
-            <PopularListings />
+            <TinyAwayListings />
             <TinyStoriesSection />
             <TravelInspoSection />
             <ReviewSection />

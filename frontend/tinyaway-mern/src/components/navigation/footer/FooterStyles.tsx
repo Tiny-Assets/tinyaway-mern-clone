@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FooterBox = styled.div`
     background-color: black; 
     color: white; 
-    width: 100vw; 
+    width: 100%; 
     display: flex; 
     flex-direction: column; 
     align-items: center;
@@ -13,12 +13,12 @@ export const FooterBox = styled.div`
 export const FooterTop = styled.div`
     background-color: black; 
     display: flex; 
-    width: 80vw; 
+    width: 90%; 
     border-bottom: 1px solid var(--corpDarkGrey1); 
 `
 
 export const FooterBottom = styled.div`
-    width: 80vw; 
+    width: 90%; 
     display: flex; 
     justify-content: space-between;
     gap: 100px; 

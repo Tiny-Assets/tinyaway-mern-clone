@@ -4,10 +4,8 @@ import NewsletterImg from '../../../assets/newsletterImg.jpg';
 export const NewsletterSection = styled.div`
     background-color: var(--corpGreyBG); 
     height: 500px; 
-    width: 100vw;
+    width: 100%;
     display: flex;
-    gap: 100px; 
-    padding-bottom: 10px;
 `
 
 export const NewsletterImage = styled.div`
@@ -19,12 +17,13 @@ export const NewsletterImage = styled.div`
 
 export const NewsletterForm = styled.div`
     color: var(--corpDarkGrey1); 
-    width: 40%; 
+    width: 35%; 
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
-    gap: 30px;
+    gap: 25px;
     font-size: 18px; 
+    margin-left: 100px; 
 `
 
 export const EmailPill = styled.div`
@@ -34,14 +33,14 @@ export const EmailPill = styled.div`
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    padding: 15px 30px; 
+    padding: 10px 20px; 
     width: 60%; 
     border-radius: 3rem; 
 
     .icon {
         background-color: var(--corpYellow); 
         font-size: 18px; 
-        padding: 10px; 
+        padding: 15px; 
         border-radius: 2rem;
     }
 `

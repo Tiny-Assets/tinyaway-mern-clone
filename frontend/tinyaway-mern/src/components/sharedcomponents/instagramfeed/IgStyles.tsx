@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const FeedHeader = styled.div`
     background-color: var(--corpGreyBG); 
-    width: 100vw; 
+    width: 100%; 
     display: flex; 
     flex-direction: column; 
     align-items: center; 
@@ -22,7 +22,7 @@ export const IgRef = styled.div`
 `
 
 export const IgFeedRow = styled.div`
-    width: 100vw; 
+    width: 100%; 
     display: flex; 
     justify-content: space-between; 
     margin-bottom: 10px; 
@@ -30,6 +30,6 @@ export const IgFeedRow = styled.div`
 
 export const IgFeedItem = styled.div`
     background-color: lightgreen; 
-    height: 377px; 
-    width: 377px; 
+    height: 375px; 
+    width: 375px; 
 `

@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const ReviewSectionStyles = styled.div`
     background-color: var(--corpLightGrey2); 
     display: flex; 
-    height: 35vw; 
+    height: 65vh; 
+    width: 100%; 
 `
 
 export const ReviewImage = styled.div`

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const DisplayPillStyles = styled.div`
 font-size: 18px; 
 background-color: var(--corpYellow); 
-padding: 5px 25px; 
+padding: 7px 20px; 
 margin: 20px 0px; 
 border-radius: 2rem; 
 

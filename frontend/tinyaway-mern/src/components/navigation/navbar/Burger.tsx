@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import { OpenBurger, BurgerContent, CloseMenu, SubMenu } from "./NavbarBurgerStyles";
 import { useState } from "react"
 import { Link } from "react-router-dom";
 import PillButton from "../../sharedcomponents/genericpillbutton/PillButton";
@@ -54,39 +54,3 @@ export default function Burger({toggleBurger}: BurgerProps) {
         </OpenBurger>
     )
 }
-
-const OpenBurger = styled.div`
-    background-color: white; 
-    width: 25%; 
-    height: 100vh; 
-    position: fixed; 
-    right: 0px; 
-    top: 0px; 
-    z-index: 2; 
-`
-
-const CloseMenu = styled.div`
-    font-size: 30px; 
-`
-
-const BurgerContent = styled.div`
-    background-color: white; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: flex-end; 
-    gap: 20px; 
-    margin: 40px 20px; 
-    font-size: 21px; 
-    padding-right: 30px; 
-    padding-top: 30px; 
-    cursor: pointer; 
-`
-
-const SubMenu = styled.div`
-    display: flex; 
-    flex-direction: column; 
-    align-items: flex-end; 
-    gap: 20px; 
-    padding-right: 60px; 
-    border-right: 1px solid black; 
-`

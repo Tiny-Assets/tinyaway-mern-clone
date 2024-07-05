@@ -14,6 +14,7 @@ export default function AnnouncementBar() {
 
 const AnnouncementStyle = styled.div`
     background-color: var(--corpYellow); 
+    width: 100%; 
     height: 48px; 
     text-align: center; 
     align-content: center; 
