@@ -1,7 +1,7 @@
 import './database.js'; 
 import express from 'express'; 
 import cors from 'cors'; 
-import { tinyAwayListings, tinyAwayListingSummary, getListingDetails, findListing, findSearchResults, getHousePictures,
+import { tinyAwayAll, tinyAway12, tinyAwayListingSummary, getListingDetails, findListing, findSearchResults, getHousePictures,
          getAmenity } from './controllers/listingsController.js';
 
 const app = express(); 
@@ -21,10 +21,21 @@ app.get('/', (req, res) => {
   res.send('Testing Now'); 
 }); 
 
+// GET ALL TinyAway Listings 
+app.get('/api/tinyawayall', async (req, res) => {
+  try {
+    const result = await tinyAwayAll(); 
+    res.json(result)
+} catch (error) {
+  console.error(error);
+  res.status(500).send('Tinyaway Mongo Failed');
+}
+}); 
+
 // GET 12 TinyAway Listings (Generic For Now)
 app.get('/api/tinyaway12', async (req, res) => {
   try {
-    const result = await tinyAwayListings(); 
+    const result = await tinyAway12(); 
     res.json(result)
 } catch (error) {
   console.error(error);
@@ -70,6 +81,17 @@ app.get('/api/housePictures', async (req, res) => {
     res.status(500).send('Image Fetching Failed'); 
   }
 });
+
+// GET Matching SEARCH results 
+app.get('/api/searchfilter', async (req, res) => {
+
+}); 
+
+// ---------------------------------------------------------------------------------------- // 
+// ---------------------------------------------------------------------------------------- // 
+// ---------------------------------------------------------------------------------------- // 
+// ---------------------------------------------------------------------------------------- // 
+
 
 // GET ONE specific listing
 app.get('/api/findHouse', async (req, res) => {

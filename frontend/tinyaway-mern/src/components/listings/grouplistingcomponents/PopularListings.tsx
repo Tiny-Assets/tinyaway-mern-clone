@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { ListingContainer, SectionTitle } from "./GroupListingStyles.tsx"
 import SingleListingCard from "../singlelistingcard/SingleListingCard.tsx";
 
-export default function TinyAwayListings() {
+export default function PopularListings() {
     const [listings, setListings] = useState([]); 
     const [fetchStatus, setFetchStatus] = useState(false); 
     const url = 'http://localhost:4000/api/tinyaway12'; 

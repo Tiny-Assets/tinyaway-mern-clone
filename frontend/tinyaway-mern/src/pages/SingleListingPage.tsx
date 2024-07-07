@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
+import { SingleListingImageProvider } from "../contexts/SingleListingImagesContext";
 import SingleListingHero from "../components/listings/singlelistingdetails/SingleListingHero";
 import SingleListingIntro from "../components/listings/singlelistingdetails/SingleListingIntro";
 import SingleImageBanner from "../components/listings/singlelistingdetails/SingleImageBanner";
 import ListingDetailsCollapsed from "../components/listings/singlelistingdetails/ListingDetailsCollapsed";
+import ListingHost from "../components/listings/singlelistingdetails/ListingHost";
+import SingleListingGallerySection from "../components/listings/singlelistingdetails/SingleListingGallerySection";
 
 export default function SingleListing() {
     const { id } = useParams(); 
@@ -32,19 +35,23 @@ export default function SingleListing() {
 
     return(
         <>
-            <SingleListingHero listingId={ id } />
-            
-            {   fetchComplete && 
-                <>
-                    <SingleListingIntro 
-                        detailsInfo={ details } 
-                        name={ location.state.listingName.name } 
-                        tags={ location.state.listingTags.tags }
-                    />
-                    <SingleImageBanner listingId={ id } />
-                    <ListingDetailsCollapsed content={ details }/>
-                </>
-            }
+            <SingleListingImageProvider>
+                <SingleListingHero listingId={ id } />
+                
+                {   fetchComplete && 
+                    <>
+                        <SingleListingIntro 
+                            detailsInfo={ details } 
+                            name={ location.state.listingName.name } 
+                            tags={ location.state.listingTags.tags }
+                        />
+                        <SingleImageBanner listingId={ id } />
+                        <ListingDetailsCollapsed content={ details }/>
+                        <ListingHost />
+                        <SingleListingGallerySection listingId={ id }/>
+                    </>
+                }
+            </SingleListingImageProvider>
         </>
     )
 }

@@ -7,10 +7,11 @@ interface SearchFieldProps {
     className?: string; 
     toDo?: () => void; 
     arrow?: boolean; 
+    id?: string; 
 }
-export default function SearchField({ className, fieldName, toDo, arrow, queryString }: SearchFieldProps) {
+export default function SearchField({ className, fieldName, toDo, arrow, id }: SearchFieldProps) {
     return(
-        <SingleField className={ className } onClick={ toDo } >
+        <SingleField className={ className } onClick={ toDo } id={ id } >
             <p>{ fieldName }</p>
             { arrow &&
                 <FontAwesomeIcon icon={ faArrowRight } />

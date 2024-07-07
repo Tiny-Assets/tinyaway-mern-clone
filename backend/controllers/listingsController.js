@@ -1,7 +1,13 @@
 import client from "../database.js";
 
 // Fetch 12 Generic TinyAway Listings
-export async function tinyAwayListings() {
+export async function tinyAwayAll() {
+  const listings = await client.db("ta_listings").collection("listings").find({}).toArray(); 
+  return listings; 
+}
+
+// Fetch 12 Generic TinyAway Listings
+export async function tinyAway12() {
   const listings = await client.db("ta_listings").collection("listings").find({}).limit(12).toArray(); 
   return listings; 
 }
@@ -30,6 +36,7 @@ export async function getAmenity(amenityId) {
   return amenity.name; 
 }
 
+// -------------------------------------------------------------------------------------------- // 
 // Sample airbnb data fetching 
 export async function call12() {
   const find12 = await client.db("sample_airbnb").collection("listingsAndReviews").find({}).limit(12).toArray(); 

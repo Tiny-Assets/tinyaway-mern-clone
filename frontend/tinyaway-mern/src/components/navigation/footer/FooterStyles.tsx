@@ -61,3 +61,26 @@ export const Description = styled.div`
     padding-left: 100px; 
     border-left: 1px solid var(--corpDarkGrey1); 
 `
+
+export const ContactCard = styled.div`
+    color: white; 
+    width: 520px; 
+    height: 330px; 
+    display: flex; 
+    flex-direction: column; 
+    font-size: 21px; 
+    font-weight: 300; 
+`
+
+export const Socials = styled.div`
+    color: white; 
+    display: flex; 
+    gap: 30px; 
+    font-size: 35px; 
+`
+
+export const Copyright = styled.div`
+    color: white; 
+    font-size: 18px; 
+    margin-top: auto;
+`

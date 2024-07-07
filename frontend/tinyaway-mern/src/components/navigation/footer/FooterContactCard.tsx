@@ -1,6 +1,6 @@
-import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faSquareInstagram, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { ContactCard, Socials, Copyright } from "./FooterStyles";
 
 export default function FooterContactCard() {
     return(
@@ -20,24 +20,3 @@ export default function FooterContactCard() {
         </ContactCard>
     )
 }
-
-const ContactCard = styled.div`
-    // background-color: maroon; 
-    width: 520px; 
-    height: 330px; 
-    display: flex; 
-    flex-direction: column; 
-    font-size: 21px; 
-    font-weight: 300; 
-`
-
-const Socials = styled.div`
-    display: flex; 
-    gap: 30px; 
-    font-size: 35px; 
-`
-
-const Copyright = styled.div`
-    font-size: 18px; 
-    margin-top: auto;
-`

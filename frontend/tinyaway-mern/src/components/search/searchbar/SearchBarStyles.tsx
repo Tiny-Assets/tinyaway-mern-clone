@@ -70,5 +70,12 @@ export const SingleField = styled.div`
         border: none;
         border-radius: 2rem; 
         padding: 10px 40px; 
+
+        &#yellow {
+            background-color: var(--corpYellow); 
+            color: var(--corpBlack); 
+            justify-content: center; 
+            padding: 10px 20px; 
+        }
     }
 `

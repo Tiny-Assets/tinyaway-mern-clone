@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import { useLocation } from "react-router-dom";
+import { SearchFilterContextProvider } from "../contexts/SearchFilterContext";
 import { LocationProvider } from "../contexts/LocationContext";
 import { GuestNumberProvider } from "../contexts/GuestNumberContext";
 import { RoomNumberProvider } from "../contexts/RoomNumberContext";
@@ -10,6 +11,7 @@ export default function SearchResults() {
     const location = useLocation(); 
     const searchParams = new URLSearchParams(location.search); 
     const conditionsArray = []; 
+
     if (searchParams.get('country')) {
         const country = searchParams.get('country'); 
         conditionsArray.push(`country=${country}`); 
@@ -43,11 +45,11 @@ export default function SearchResults() {
 
     return(
         <>
-        <GuestNumberProvider><LocationProvider><RoomNumberProvider>
-                <PageConfiguration>
-                    <SearchResultsLayout />
-                </PageConfiguration>
-        </RoomNumberProvider></LocationProvider></GuestNumberProvider>
+        <GuestNumberProvider><LocationProvider><RoomNumberProvider><SearchFilterContextProvider>
+            <PageConfiguration>
+                <SearchResultsLayout />
+            </PageConfiguration>
+        </SearchFilterContextProvider></RoomNumberProvider></LocationProvider></GuestNumberProvider>
         </>
     )
 }

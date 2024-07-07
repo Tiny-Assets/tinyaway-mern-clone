@@ -91,7 +91,7 @@ export const SummaryActions = styled.div`
     gap: 20px; 
 `
 
-// Image Banner Styles
+// Image Banner section of Single Listing Page
 export const BannerStyle = styled.div`
     background-size: cover; 
     background-repeat: no-repeat; 
@@ -100,7 +100,7 @@ export const BannerStyle = styled.div`
     height: 70vh; 
 `
 
-// Collapsible Details Menus
+// Collapsible Details section of Single Listing Page
 export const DetailsWrapper = styled.div`
     display: flex; 
     justify-content: center; 
@@ -134,7 +134,7 @@ export const SubMenuTitle = styled.h2`
     margin-bottom: 10px; 
 `
 
-// Submenu Content Layout
+// Submenu Content Layout of Collapsible Details 
 export const CenteredContent = styled.div`
     color: var(--corpBlack); 
     width: 90%; 
@@ -147,4 +147,92 @@ export const SplitContent = styled.div`
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
+`
+
+// Host Section of single listing page 
+export const HostBanner = styled.div`
+    background-color: var(--corpGreyBG); 
+    height: 60vh; 
+    width: 100%; 
+    display: flex;
+    overflow: hidden; 
+`
+
+export const HostSide = styled.div`
+    width: 50%; 
+    margin: 100px; 
+`
+
+export const Title = styled.h2`
+    font-weight: 700; 
+`
+export const HostImage = styled.div`
+    width: 50%; 
+`
+
+export const HostDetailsWrapper = styled.div`
+    width: 100%; 
+    display: flex; 
+    margin-top: 40px; 
+`
+
+export const LogoColor = styled.img`
+    background-color: black; 
+    filter: invert(100); 
+    height: 15%; 
+    width: 15%; 
+    justify-self: start;
+    border-radius: 4rem; 
+`
+
+export const HostDetails = styled.div`
+    margin-left: 30px; 
+`
+
+export const HostName = styled.h3`
+    color: var(--corpDarkGrey1); 
+    font-size: 28px; 
+`
+
+export const Stars = styled.div`
+    display: flex; 
+    color: orange; 
+    font-size: 21px; 
+    margin-top: 10px; 
+    margin-bottom: 20px; 
+`
+
+// Gallery Section of Single Listing Page
+export const GalleryTitle = styled.h2`
+    font-size: 34px; 
+    font-weight: 700; 
+    color: var(--corpDarkGrey1); 
+`
+
+export const GalleryWrapper = styled.div`
+    // width: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;  
+    margin: 50px 0px; 
+`
+
+export const GalleryScroller = styled.div` 
+    height: 65vh; 
+    width: 100%;
+    display: flex; 
+    gap: 1%; 
+    overflow: auto; 
+    margin-top: 20px; 
+
+     &::-webkit-scrollbar {
+        display: none;
+    }
+`
+
+export const ImageThumbnail = styled.img`
+    object-fit: cover; 
+    background-color: lightgreen; 
+    min-width: 45%;
+    height: 100%; 
 `

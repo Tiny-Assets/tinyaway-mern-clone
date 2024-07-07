@@ -1,4 +1,4 @@
-import SearchResultsFilterBar from "./FilterBar"
+import SearchResultsFilterBar from "./filtercomponents/SearchResultsFilterBar"
 
 export default function SearchResultsLayout() {
     return(
