@@ -145,7 +145,7 @@ SingleImagesListingContext
 <!--   ----------------------------------------------------------------------------------------------------------- -->
 <!--   ----------------------------------------------------------------------------------------------------------- -->
 
-### Shared Utilities
+## Shared Utilities
 Search Query Constructor
 - Used initially for testing search functionality with sample airbnb data, to be updated once Atlas Search is implemented
 - Path: src/sharedutilities/constructQuery.tsx
@@ -154,7 +154,7 @@ Generic State Toggle (Boolean only)
 - Used for simple boolean state toggling, where there are no other dependencies or props needed/affected
 - Path: src/shareutilities/toggleState.tsx
 
-### Custom Hooks
+## Custom Hooks
 useGetImages
 - Used to get all images for a single Tiny Away listing page
 - Path: src/hooks/useGetImages.tsx
