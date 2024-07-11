@@ -18,6 +18,7 @@ export const SingleCard = styled.div`
 export const ListingImageArea = styled.div`
     background-size: cover;
     background-position: center; 
+    background-repeat: no-repeat; 
     height: 58%; 
     width: 100%; 
 `
@@ -25,7 +26,6 @@ export const ListingImageArea = styled.div`
 export const CardHeader = styled.div`
     display: flex; 
     justify-content: space-between; 
-    // align-items: center; 
     padding: 10px 15px; 
     border-bottom: 1px solid var(--corpLightGrey1); 
 `
@@ -70,7 +70,6 @@ export const PriceAmount = styled.h4`
 `
 
 export const DescriptionSection = styled.div`
-    // background-color: lightgreen; 
     height: 22%; 
     overflow: hidden; 
     border-bottom: 1px solid var(--corpLightGrey1); 

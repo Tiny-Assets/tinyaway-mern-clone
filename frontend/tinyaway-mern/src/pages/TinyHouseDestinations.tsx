@@ -1,9 +1,10 @@
 import AllListings from "../components/listings/grouplistingcomponents/AllListings"
+import { DestinationsTitle } from "../components/listings/grouplistingcomponents/GroupListingStyles"
 
 export default function TinyHouseDestinationsPage() {
     return(
         <>
-            <h1>TINY HOUSE DESTINATIONS</h1>
+            <DestinationsTitle>TINY HOUSE DESTINATIONS</DestinationsTitle>
             <AllListings />
         </>
     )

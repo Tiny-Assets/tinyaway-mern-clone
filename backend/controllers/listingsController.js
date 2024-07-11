@@ -1,8 +1,8 @@
 import client from "../database.js";
 
-// Fetch 12 Generic TinyAway Listings
+// Fetch ALL Generic TinyAway Listings
 export async function tinyAwayAll() {
-  const listings = await client.db("ta_listings").collection("listings").find({}).toArray(); 
+  const listings = await client.db("ta_listings").collection("listings").find({}).toArray();
   return listings; 
 }
 
@@ -37,6 +37,18 @@ export async function getAmenity(amenityId) {
 }
 
 // -------------------------------------------------------------------------------------------- // 
+// -------------------------------------------------------------------------------------------- // 
+// -------------------------------------------------------------------------------------------- // 
+// -------------------------------------------------------------------------------------------- // 
+
+// Testing Aggregated Function
+export async function aggregatedSearch() {
+  const listings = await client.db("ta_listings").collection("listings").findOne({});
+
+  return listings.tags; 
+}
+
+
 // Sample airbnb data fetching 
 export async function call12() {
   const find12 = await client.db("sample_airbnb").collection("listingsAndReviews").find({}).limit(12).toArray(); 

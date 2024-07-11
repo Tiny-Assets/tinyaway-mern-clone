@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { ListingContainer, SectionTitle } from "./GroupListingStyles.tsx"
 import SingleListingCard from "../singlelistingcard/SingleListingCard.tsx";
+import PillButton from "../../sharedcomponents/genericpillbutton/PillButton.tsx";
 
 export default function PopularListings() {
     const [listings, setListings] = useState([]); 
@@ -11,13 +12,12 @@ export default function PopularListings() {
         fetch(url)
             .then(res => {
                 if (res.ok) {
-                    return res.json(); // Assuming response is JSON
+                    return res.json(); 
                 } else {
                     throw new Error('Network response was not ok.');
                 }
             })
             .then(data => {
-                // Work with your data here
                 setListings(data); 
                 setFetchStatus(true); 
             })
@@ -44,7 +44,10 @@ export default function PopularListings() {
                         <SingleListingCard key={index} listingId={ listing.id } name={ listing.listing_name } featuredImage={ listing.featuredImage } tags={ listing.tags }/>
                     ))
                 }
+
+                <PillButton className='noChange' buttonName='EXPLORE ALL OUR PROPERTIES' path='/tiny-house-destinations' />
             </ListingContainer>
+            
         </>
     )
 }

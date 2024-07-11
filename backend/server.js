@@ -2,7 +2,9 @@ import './database.js';
 import express from 'express'; 
 import cors from 'cors'; 
 import { tinyAwayAll, tinyAway12, tinyAwayListingSummary, getListingDetails, findListing, findSearchResults, getHousePictures,
-         getAmenity } from './controllers/listingsController.js';
+         getAmenity, 
+         aggregatedSearch} from './controllers/listingsController.js';
+import { tinyStoriesAll, tinyStories8 } from './controllers/storiesController.js';
 
 const app = express(); 
 const PORT = process.env.PORT || 4000; 
@@ -20,6 +22,11 @@ app.listen(PORT, () => {
 app.get('/', (req, res) => {
   res.send('Testing Now'); 
 }); 
+
+// ---------------------------------------------------------------------------------------- // 
+// ---------------------------------------------------------------------------------------- // 
+// ---------------------------------------------------------------------------------------- // 
+// ---------------------------------------------------------------------------------------- // 
 
 // GET ALL TinyAway Listings 
 app.get('/api/tinyawayall', async (req, res) => {
@@ -82,30 +89,6 @@ app.get('/api/housePictures', async (req, res) => {
   }
 });
 
-// GET Matching SEARCH results 
-app.get('/api/searchfilter', async (req, res) => {
-
-}); 
-
-// ---------------------------------------------------------------------------------------- // 
-// ---------------------------------------------------------------------------------------- // 
-// ---------------------------------------------------------------------------------------- // 
-// ---------------------------------------------------------------------------------------- // 
-
-
-// GET ONE specific listing
-app.get('/api/findHouse', async (req, res) => {
-  const listingId = req.query.listingId; 
-  
-  try {
-    const result = await findListing(listingId);
-    res.json(result);  
-} catch (error) {
-    console.error(error);
-    res.status(500).send('An error occurred');
-}
-}); 
-
 // GET List of amenities for one tiny house 
 app.get('/api/findamenities', async (req, res) => {
   const amenityId = req.query.amenityId;
@@ -116,6 +99,71 @@ app.get('/api/findamenities', async (req, res) => {
 } catch (error) {
     console.error(error);
     res.status(500).send('No such amenity');
+}
+}); 
+
+// GET Matching SEARCH results 
+app.get('/api/searchfilter', async (req, res) => {
+}); 
+
+// Test aggregated search 
+app.get('/api/aggregated', async (req, res) => {
+
+  try {
+    const result = await aggregatedSearch();
+    res.json(result);  
+} catch (error) {
+    console.error(error);
+    res.status(500).send('aggregation failed');
+}
+}); 
+
+
+// ---------------------------------------------------------------------------------------- // 
+// ---------------------------------------------------------------------------------------- // 
+// ---------------------------------------------------------------------------------------- // 
+// ---------------------------------------------------------------------------------------- // 
+
+// GET ALL Stories for Homepage
+app.get('/api/allstories', async (req, res) => {
+
+  try {
+    const result = await tinyStoriesAll();
+    res.json(result);  
+} catch (error) {
+    console.error(error);
+    res.status(500).send('Story fetching failed');
+}
+}); 
+
+// GET 8 Stories for Homepage
+app.get('/api/storiessection', async (req, res) => {
+
+  try {
+    const result = await tinyStories8();
+    res.json(result);  
+} catch (error) {
+    console.error(error);
+    res.status(500).send('Story fetching failed');
+}
+}); 
+
+// ---------------------------------------------------------------------------------------- // 
+// ---------------------------------------------------------------------------------------- // 
+// ---------------------------------------------------------------------------------------- // 
+// ---------------------------------------------------------------------------------------- // 
+
+// To delete when data calling / search function for tinyaway listings is done. This is using sample airbnb data
+// GET ONE specific listing
+app.get('/api/findHouse', async (req, res) => {
+  const listingId = req.query.listingId; 
+  
+  try {
+    const result = await findListing(listingId);
+    res.json(result);  
+} catch (error) {
+    console.error(error);
+    res.status(500).send('An error occurred');
 }
 }); 
 
@@ -145,3 +193,8 @@ app.get('/api/search', async (req, res) => {
     res.status(500).send('An error occurred');
   }
 });
+
+// ---------------------------------------------------------------------------------------- // 
+// ---------------------------------------------------------------------------------------- // 
+// ---------------------------------------------------------------------------------------- // 
+// ---------------------------------------------------------------------------------------- // 

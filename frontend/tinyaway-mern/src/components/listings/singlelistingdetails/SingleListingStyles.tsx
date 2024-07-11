@@ -27,6 +27,7 @@ export const SingleHeroSmallImage = styled.div`
     width: 100%; 
 `
 
+// ------------------------------------------------------------------------ //
 // Intro Section of Single Listing Page 
 export const SingleListingIntroWrapper = styled.div`
     width: 85%; 
@@ -91,6 +92,7 @@ export const SummaryActions = styled.div`
     gap: 20px; 
 `
 
+// ------------------------------------------------------------------------ //
 // Image Banner section of Single Listing Page
 export const BannerStyle = styled.div`
     background-size: cover; 
@@ -100,6 +102,7 @@ export const BannerStyle = styled.div`
     height: 70vh; 
 `
 
+// ------------------------------------------------------------------------ //
 // Collapsible Details section of Single Listing Page
 export const DetailsWrapper = styled.div`
     display: flex; 
@@ -134,6 +137,7 @@ export const SubMenuTitle = styled.h2`
     margin-bottom: 10px; 
 `
 
+// ------------------------------------------------------------------------ //
 // Submenu Content Layout of Collapsible Details 
 export const CenteredContent = styled.div`
     color: var(--corpBlack); 
@@ -149,6 +153,7 @@ export const SplitContent = styled.div`
     align-items: center; 
 `
 
+// ------------------------------------------------------------------------ //
 // Host Section of single listing page 
 export const HostBanner = styled.div`
     background-color: var(--corpGreyBG); 
@@ -202,6 +207,7 @@ export const Stars = styled.div`
     margin-bottom: 20px; 
 `
 
+// ------------------------------------------------------------------------ //
 // Gallery Section of Single Listing Page
 export const GalleryTitle = styled.h2`
     font-size: 34px; 

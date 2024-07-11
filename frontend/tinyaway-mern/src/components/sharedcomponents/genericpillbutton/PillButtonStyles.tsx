@@ -7,7 +7,7 @@ export const Pill = styled.div`
     display: inline-block;
     align-content: center; 
     border-radius: 2rem; 
-    padding: 10px 20px; 
+    padding: 15px 30px; 
 
     &:hover {
         background-color: var(--corpYellowHover); 
@@ -27,7 +27,13 @@ export const Pill = styled.div`
     &.noChange {
         background-color: transparent; 
         color: var(--corpLightGrey2);
-        margin-top: 50px; 
+        margin: 30px; 
         border: 1px solid var(--corpLightGrey2);  
+    }
+
+    &.white {
+        background-color: white; 
+        color: var(--corpDarkGrey2);
+        margin-top: 30px; 
     }
 `

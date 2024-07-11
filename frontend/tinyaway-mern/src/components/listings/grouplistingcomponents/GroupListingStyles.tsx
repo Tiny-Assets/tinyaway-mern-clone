@@ -12,3 +12,9 @@ export const ListingContainer = styled.div`
     gap: 30px; 
     padding: 30px; 
 `
+
+export const DestinationsTitle = styled.h1`
+    text-align: center; 
+    font-weight: 700; 
+    margin-top: 30px;  
+`

@@ -13,7 +13,7 @@ interface SingleListingCardProps {
 
 export default function SingleListingCard({ listingId, name, featuredImage, tags }: SingleListingCardProps) {
     const [listingName, setListingName] = useState(''); 
-    const [listingTags, setListingTags] = useState([]); 
+    const [listingTags, setListingTags] = useState<string[]>([]); 
     const [details, setDetails] = useState([]); 
     const [fetchStatus, setFetchStatus] = useState(false); 
     const url = `http://localhost:4000/api/houseDetails?listingId=${ listingId }`; 
@@ -29,11 +29,11 @@ export default function SingleListingCard({ listingId, name, featuredImage, tags
                 setFetchStatus(true); 
             })
             .catch(error => console.error('Error fetching data:', error));
-    },[url]); 
+    },[url, name, tags]); 
 
-    useEffect(() => {
-        console.log(details); 
-    }, [details]); 
+    // useEffect(() => {
+    //     console.log(details); 
+    // }, [details]); 
 
     const navigate = useNavigate(); 
 
