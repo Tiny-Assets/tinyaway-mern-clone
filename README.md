@@ -115,25 +115,25 @@ GET 8 Tiny Stories for Homepage Section
 ### Contexts 
 #### Search Function Contexts
 GuestNumberContext
-    - For setting Number of Guests specified in Search Function
-    - Path: src/contexts/GuestNumberContext.tsx
+- For setting Number of Guests specified in Search Function
+- Path: src/contexts/GuestNumberContext.tsx
 
 LocationContext
-    - For setting Selected Location in Search Function
-    - Path: src/contexts/LocationContext.tsx
+- For setting Selected Location in Search Function
+- Path: src/contexts/LocationContext.tsx
 
 RoomNumberContext
-    - For setting Number of Rooms specified in Search Function
-    - Path: src/contexts/RoomNumberContext.tsx
+- For setting Number of Rooms specified in Search Function
+- Path: src/contexts/RoomNumberContext.tsx
 
 SearchFilterContext
-    - For setting further Filter Selections in Search Function
-    - Path: src/contexts/SearchFilterContext.tsx
+- For setting further Filter Selections in Search Function
+- Path: src/contexts/SearchFilterContext.tsx
 
 #### Listings Contexts 
 SingleImagesListingContext
-    - For setting URL array on Single Listing Page, to enable the scrolling gallery
-    - Path: src/contexts/SingleListingImagesContext.tsx
+- For setting URL array on Single Listing Page, to enable the scrolling gallery
+- Path: src/contexts/SingleListingImagesContext.tsx
 
 <!--   ----------------------------------------------------------------------------------------------------------- -->
 <!--   ----------------------------------------------------------------------------------------------------------- -->
@@ -147,18 +147,18 @@ SingleImagesListingContext
 
 ### Shared Utilities
 Search Query Constructor
-    - Used initially for testing search functionality with sample airbnb data, to be updated once Atlas Search is implemented
-    - Path: src/sharedutilities/constructQuery.tsx
+- Used initially for testing search functionality with sample airbnb data, to be updated once Atlas Search is implemented
+- Path: src/sharedutilities/constructQuery.tsx
 
 Generic State Toggle (Boolean only)
-    - Used for simple boolean state toggling, where there are no other dependencies or props needed/affected
-    - Path: src/shareutilities/toggleState.tsx
+- Used for simple boolean state toggling, where there are no other dependencies or props needed/affected
+- Path: src/shareutilities/toggleState.tsx
 
 ### Custom Hooks
 useGetImages
-    - Used to get all images for a single Tiny Away listing page
-    - Path: src/hooks/useGetImages.tsx
+- Used to get all images for a single Tiny Away listing page
+- Path: src/hooks/useGetImages.tsx
 
 usePagination
-    - Used for pagination of cards displayed
-    - Path: src/hooks/usePagination.tsx
+- Used for pagination of cards displayed
+- Path: src/hooks/usePagination.tsx
