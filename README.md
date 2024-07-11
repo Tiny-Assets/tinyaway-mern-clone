@@ -110,10 +110,10 @@ GET 8 Tiny Stories for Homepage Section
 <!--   ----------------------------------------------------------------------------------------------------------- -->
 <!--   ----------------------------------------------------------------------------------------------------------- -->
 
-## Frontend with ReactJS + Helmet 
+# Frontend with ReactJS + Helmet 
 
-### Contexts 
-#### Search Function Contexts
+## Contexts 
+### Search Function Contexts
 GuestNumberContext
 - For setting Number of Guests specified in Search Function
 - Path: src/contexts/GuestNumberContext.tsx
@@ -130,7 +130,7 @@ SearchFilterContext
 - For setting further Filter Selections in Search Function
 - Path: src/contexts/SearchFilterContext.tsx
 
-#### Listings Contexts 
+### Listings Contexts 
 SingleImagesListingContext
 - For setting URL array on Single Listing Page, to enable the scrolling gallery
 - Path: src/contexts/SingleListingImagesContext.tsx
