@@ -102,11 +102,11 @@ app.get('/api/findamenities', async (req, res) => {
 }
 }); 
 
-// GET Matching SEARCH results 
+// GET Matching SEARCH results (To be implemented once Atlas Search is set up)
 app.get('/api/searchfilter', async (req, res) => {
 }); 
 
-// Test aggregated search 
+// Test aggregated search (To be implemented once Atlas Search is set up)
 app.get('/api/aggregated', async (req, res) => {
 
   try {
@@ -152,6 +152,7 @@ app.get('/api/storiessection', async (req, res) => {
 // ---------------------------------------------------------------------------------------- // 
 // ---------------------------------------------------------------------------------------- // 
 // ---------------------------------------------------------------------------------------- // 
+
 
 // To delete when data calling / search function for tinyaway listings is done. This is using sample airbnb data
 // GET ONE specific listing

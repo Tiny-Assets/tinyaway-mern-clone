@@ -44,3 +44,121 @@ If it does not work, try running
 - Take note: We are using sample dataset from MongoDB 
 <!-- # test API key for MongoDB [DO NOT DELETE] -->
 <!-- # hV9T48NpQC3aWTnnpu7nUAcmbFXQ7ROr0tKHvWdeL0eFUrrzyFFpKVz7o8VsO4wj -->
+
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+
+## MongoDB Demo API Endpoints
+### Listings APIs 
+GET all Tiny Away Listings
+```
+    http://localhost:4000/api/tinyawayall
+```
+
+GET 12 Tiny Away Listings (For Homepage Popular Listings Section)
+    - This needs to be updated once marketing team has decided how they want to filter this, and once the confirmed data models have been decided (11 July 2024)
+```
+    http://localhost:4000/api/tinyawaya12
+```
+
+GET one specific Tiny Away Listing Summary
+```
+    http://localhost:4000/api/houseSummary
+```
+
+GET one specific Tiny Away Listing Details 
+```
+    http://localhost:4000/api/houseDetails
+```
+
+GET all images of a single Tiny Away Listing
+```
+    http://locahost:4000/api/housePictures
+```
+
+GET Tiny House Amenity Name List 
+```
+    http://localhost:4000/api/findamenities
+```
+
+### Stories APIs
+GET all Tiny Away Stories 
+```
+    http://localhost:4000/api/allstories
+```
+
+GET 8 Tiny Stories for Homepage Section
+    - This needs to be updated once marketing team has decided how they want to filter this, and once the confirmed data models have been decided (11 July 2024)
+```
+    http://localhost:4000/api/storiessection
+```
+
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+
+## Frontend with ReactJS + Helmet 
+
+### Contexts 
+#### Search Function Contexts
+GuestNumberContext
+    - For setting Number of Guests specified in Search Function
+    - Path: src/contexts/GuestNumberContext.tsx
+
+LocationContext
+    - For setting Selected Location in Search Function
+    - Path: src/contexts/LocationContext.tsx
+
+RoomNumberContext
+    - For setting Number of Rooms specified in Search Function
+    - Path: src/contexts/RoomNumberContext.tsx
+
+SearchFilterContext
+    - For setting further Filter Selections in Search Function
+    - Path: src/contexts/SearchFilterContext.tsx
+
+#### Listings Contexts 
+SingleImagesListingContext
+    - For setting URL array on Single Listing Page, to enable the scrolling gallery
+    - Path: src/contexts/SingleListingImagesContext.tsx
+
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+<!--   ----------------------------------------------------------------------------------------------------------- -->
+
+### Shared Utilities
+Search Query Constructor
+    - Used initially for testing search functionality with sample airbnb data, to be updated once Atlas Search is implemented
+    - Path: src/sharedutilities/constructQuery.tsx
+
+Generic State Toggle (Boolean only)
+    - Used for simple boolean state toggling, where there are no other dependencies or props needed/affected
+    - Path: src/shareutilities/toggleState.tsx
+
+### Custom Hooks
+useGetImages
+    - Used to get all images for a single Tiny Away listing page
+    - Path: src/hooks/useGetImages.tsx
+
+usePagination
+    - Used for pagination of cards displayed
+    - Path: src/hooks/usePagination.tsx
