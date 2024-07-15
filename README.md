@@ -1,4 +1,4 @@
-# Tiny-Away Clone MERN-Next
+# Tiny-Away Clone MERN
 Testing Tiny Away Clone with MERN
 
 ## General
