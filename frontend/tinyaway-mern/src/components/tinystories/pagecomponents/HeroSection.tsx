@@ -1,5 +1,5 @@
-import { HeroArea } from "../TinyStoriesMainStyles";
-import DemoHero from '../../../assets/demoHero.jpg'
+import { HeroArea } from '../TinyStoriesMainStyles';
+import DemoHero from '../../../assets/demoHero.jpg'; 
 
 export default function HeroSection() {
     return(

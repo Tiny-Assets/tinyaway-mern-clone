@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import StoriesPagination from "./StoriesPagination";
+import RenderPagination from "../../../sharedutilities/renderPagination";
 import { ContentArea, PaginationButtons, StoryCardsArea } from "../TinyStoriesMainStyles";
 import TinyStoryCard from "../TinyStoryCard";
 
@@ -50,7 +50,7 @@ export default function CardsSection() {
                             }
                         </StoryCardsArea>
                         <PaginationButtons>
-                            <StoriesPagination dataQuantity={ allStories.length } btnClick={ selectPage } pageSelected={ pageSelected } />
+                            <RenderPagination dataQuantity={ allStories.length } btnClick={ selectPage } pageSelected={ pageSelected } />
                         </PaginationButtons>
                     </ContentArea>
             }           

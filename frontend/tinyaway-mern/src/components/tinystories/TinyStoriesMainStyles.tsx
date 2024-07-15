@@ -26,12 +26,6 @@ export const ContentArea = styled.div`
     margin: 30px 125px; 
 `
 
-export const PaginationButtons = styled.div`
-    display: flex; 
-    justify-content: center; 
-    margin-top: 30px; 
-`
-
 export const StoryCardsArea = styled.div`
     display: grid; 
     grid-template-columns: repeat(4, 1fr); 

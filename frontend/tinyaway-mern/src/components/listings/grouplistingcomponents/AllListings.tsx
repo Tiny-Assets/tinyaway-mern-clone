@@ -1,10 +1,15 @@
 import { useState, useEffect } from "react";
 import { ListingContainer } from "./GroupListingStyles";
 import SingleListingCard from "../singlelistingcard/SingleListingCard";
+import RenderPagination from "../../../sharedutilities/renderPagination";
+import { PaginationButtons } from "../../tinystories/TinyStoriesMainStyles";
 
 export default function AllListings() {
     const [listings, setListings] = useState([]); 
+    const [displayedListings, setDisplayedListings] = useState([]); 
     const [fetchStatus, setFetchStatus] = useState(false); 
+    const [pageSelected, setPageSelected] = useState(1); 
+
     const url = 'http://localhost:4000/api/tinyawayall'; 
 
     useEffect(() => {
@@ -25,19 +30,33 @@ export default function AllListings() {
             });
     },[]); 
     
+    const selectPage = (e) => {
+        const pageNumber = e.target.innerText; 
+        setPageSelected(pageNumber); 
+    }
+
     useEffect(() => {
-        console.log(listings[0]); 
-    }, [listings]); 
+        console.log(pageSelected); 
+    }, [pageSelected]); 
+
+    useEffect(() => {
+        const firstStory = (pageSelected - 1) * 12; 
+        const lastStory = firstStory + 12; 
+        setDisplayedListings(listings.slice(firstStory, lastStory)); 
+    },[pageSelected, setDisplayedListings, listings]); 
 
     return(
         <>
             <ListingContainer>
                 { fetchStatus && 
-                    listings.map((listing, index) => (
+                    displayedListings.map((listing, index) => (
                         <SingleListingCard key={ index } listingId={ listing.id } name={ listing.listing_name } featuredImage={ listing.featuredImage } tags={ listing.tags }/>
                     ))
                 }
             </ListingContainer>
+            <PaginationButtons>
+                <RenderPagination dataQuantity={ listings.length } btnClick={ selectPage } pageSelected={ pageSelected } />
+            </PaginationButtons>
         </>
     )
 }
