@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { ListingContainer } from "./GroupListingStyles";
 import SingleListingCard from "../singlelistingcard/SingleListingCard";
 import RenderPagination from "../../../sharedutilities/renderPagination";
-import { PaginationButtons } from "../../tinystories/TinyStoriesMainStyles";
 
 export default function AllListings() {
     const [listings, setListings] = useState([]); 
@@ -54,9 +53,7 @@ export default function AllListings() {
                     ))
                 }
             </ListingContainer>
-            <PaginationButtons>
                 <RenderPagination dataQuantity={ listings.length } btnClick={ selectPage } pageSelected={ pageSelected } />
-            </PaginationButtons>
         </>
     )
 }

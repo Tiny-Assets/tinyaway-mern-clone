@@ -1,5 +1,5 @@
-import { FormField, FormLogoTop, FormWrapper } from "../ourstorycomponents/OurStoryStyles";
-import PillButton from "./genericpillbutton/PillButton";
+import { FormField, FormLogoTop, FormWrapper } from "../contactform/contactFormStyles";
+import PillButton from "../genericpillbutton/PillButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMountain } from "@fortawesome/free-solid-svg-icons";
 

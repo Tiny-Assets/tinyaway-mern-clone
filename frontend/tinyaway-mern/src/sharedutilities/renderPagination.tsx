@@ -2,13 +2,13 @@ import styled from "styled-components";
 import { useState, useEffect } from "react";
 import { usePagination } from "../hooks/usePagination"
 
-interface StoriesPaginationProps {
+interface RenderPaginationProps {
     dataQuantity: number; 
     btnClick: (e) => void; 
     // pageSelected: number; 
 }
 
-export default function RenderPagination({ dataQuantity, btnClick }: StoriesPaginationProps) {
+export default function RenderPagination({ dataQuantity, btnClick }: RenderPaginationProps) {
     const { pageCount, pagesArray } = usePagination( dataQuantity ); 
     const [pageBtns, setPageBtns] = useState(false); 
 

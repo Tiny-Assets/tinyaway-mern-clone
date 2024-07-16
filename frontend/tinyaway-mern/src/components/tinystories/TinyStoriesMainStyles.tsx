@@ -19,6 +19,11 @@ export const HeroArea = styled.div`
     }
 `
 
+export const ContentWrapper = styled.div`
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+`
 export const ContentArea = styled.div`
     display: flex; 
     flex-direction: column; 
@@ -58,7 +63,6 @@ export const StoryCardTitle = styled.div`
     align-items: center;
     gap: 8%; 
     margin: 5px; 
-    // border: 1px solid red; 
 `
 export const FakeProfilePic = styled.div`
     background-color: orange; 
@@ -74,7 +78,6 @@ export const StoryInfo = styled.div`
     flex-direction: column; 
     align-items: flex-start; 
     justify-content: center;
-    // border: 1px solid green;  
 `
 
 export const AuthorName = styled.div`

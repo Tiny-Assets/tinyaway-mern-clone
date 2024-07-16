@@ -1,4 +1,4 @@
-import { HeroArea } from "../components/sharedcomponents/GenericHero"; 
+import { HeroArea } from "../components/sharedcomponents/GenericHeroStyles"; 
 import OurStoryContent from "../components/ourstorycomponents/OurStoryContent";
 import DemoHero from '../assets/demoHero.jpg'; 
 

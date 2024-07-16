@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import RenderPagination from "../../../sharedutilities/renderPagination";
-import { ContentArea, PaginationButtons, StoryCardsArea } from "../TinyStoriesMainStyles";
 import TinyStoryCard from "../TinyStoryCard";
+import { ContentArea, ContentWrapper, StoryCardsArea } from "../TinyStoriesMainStyles";
 
 export default function CardsSection() {
     const [allStories, setAllStories] = useState([]); 
@@ -40,6 +40,7 @@ export default function CardsSection() {
     return(
         <>
             { fetchStatus && 
+                <ContentWrapper>
                     <ContentArea>
                         <p>{ allStories.length } Tiny Away Stories</p>
                         <StoryCardsArea>
@@ -49,10 +50,9 @@ export default function CardsSection() {
 
                             }
                         </StoryCardsArea>
-                        <PaginationButtons>
-                            <RenderPagination dataQuantity={ allStories.length } btnClick={ selectPage } pageSelected={ pageSelected } />
-                        </PaginationButtons>
                     </ContentArea>
+                    <RenderPagination dataQuantity={ allStories.length } btnClick={ selectPage } pageSelected={ pageSelected } />
+                </ContentWrapper>
             }           
         </>
     )

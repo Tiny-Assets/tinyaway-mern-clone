@@ -1,5 +1,5 @@
-import { BrandsPart, DoubleColumnWrapper, FirstPara, ImageFeature, OurStoryWrapper, SecondPara } from "./OurStoryStyles";
-import ContactSection from "./ContactSection";
+import { DoubleColumnWrapper, FirstPara, ImageFeature, OurStoryWrapper, SecondPara } from "./OurStoryStyles";
+import ContactSection from "../sharedcomponents/contactform/ContactSection";
 import DemoImg from '../../assets/demoImg2.jpg'; 
 
 export default function OurStoryContent() {
@@ -21,7 +21,6 @@ export default function OurStoryContent() {
                 <ImageFeature style={{ backgroundImage:`url(${ DemoImg })`}} />
             </OurStoryWrapper>
             <ContactSection />
-            <BrandsPart />
         </>
     )
 }

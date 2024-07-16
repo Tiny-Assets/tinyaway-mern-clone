@@ -1,15 +1,24 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import sevenNews from "../../assets/7newsLogo.png"; 
+import bizInsider from "../../assets/bizinsiderLogo.png"; 
+import stuffLogo from "../../assets/stuffLogo.png"; 
+import sundayHerald from "../../assets/sundayHeraldLogo.png"; 
+import sundayTele from "../../assets/sundayTelegraphLogo.png"; 
+import timeOutLogo from "../../assets/timeoutLogo.png"; 
+import wamLogo from "../../assets/wamLogo.png"; 
 
 export default function FeaturedInSection() {
     return(
         <Section>
             <h3>FEATURED IN</h3>
             <LogoSection>
-                <p>Logo</p>
-                <p>Logo</p>
-                <p>Logo</p>
-                <p>Logo</p>
-                <p>Logo</p>
+                <SingleLogo style={{ backgroundImage: `url(${ wamLogo })`}} />
+                <SingleLogo style={{ backgroundImage: `url(${ timeOutLogo })`}} />
+                <SingleLogo style={{ backgroundImage: `url(${ stuffLogo })`}} />
+                <SingleLogo style={{ backgroundImage: `url(${ sundayTele })`}} />
+                <SingleLogo style={{ backgroundImage: `url(${ bizInsider })`}} />
+                <SingleLogo style={{ backgroundImage: `url(${ sundayHerald })`}} />
+                <SingleLogo className='overlay' style={{ backgroundImage: `url(${ sevenNews })`}} />
             </LogoSection>
         </Section>
     )
@@ -17,19 +26,29 @@ export default function FeaturedInSection() {
 
 const Section = styled.div`
     text-align: center; 
-    margin: 30px; 
+    margin: 60px 40px; 
 `
 
 const LogoSection = styled.div`
     display: flex; 
-    justify-content: space-between; 
+    justify-content: center;
+    gap: 5%;  
     align-items: center; 
-    margin: 20px 30px; 
+    margin: 40px 30px; 
 
-    p {
-        background-color: lightblue;
-        opacity: 0.7;  
-        padding: 20px 40px;
-        border-radius: 3rem;  
+    img {
+        object-fit: fit; 
+    }
+`
+
+const SingleLogo = styled.div`
+    background-size: contain;
+    background-repeat: no-repeat;  
+    background-position: center; 
+    height: 50px; 
+    width: 200px; 
+
+    &.overlay {
+        filter: grayscale(100%) opacity(65%); 
     }
 `

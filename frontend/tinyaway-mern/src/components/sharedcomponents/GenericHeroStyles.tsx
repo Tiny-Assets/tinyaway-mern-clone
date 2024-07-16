@@ -16,5 +16,6 @@ export const HeroArea = styled.div`
     p {
         color: white; 
         font-size: 24px; 
+        margin-bottom: 50px; 
     }
 `
