@@ -6,6 +6,61 @@ Testing Tiny Away Clone with MERN
 - Node Version 20.13.1
 - Packages Used: nodejs, npm, dotenv, mongodb, mongoose, font awesome, helmet, styled components
 
+## How To Work With Github
+- Install Git on your machine with the following link: 
+    https://git-scm.com/download/win
+
+- Set up your Username 
+
+```
+    git config --global user.name "Your GitHub Username"
+    git config --global user.email "Your GitHub Email"
+
+```
+
+- Authenticate your Github 
+
+```
+    gh auth login
+```
+
+- Clone the Repo onto your machine (For now, you can use the URL but in future we will change to SSH)
+
+    - Click on the green "Code" button near the top-right corner of the page.
+    - Copy the URL shown under either "HTTPS" or "SSH". If you're prompted to select a protocol, choose the one you prefer or have set up previously.
+    - Then use the following command with the URL/SSH: 
+
+    ```
+    git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+    ```
+
+- Create A New Branch To Work On Your Code 
+
+```
+    git checkout -b new-branch-name
+```
+
+- When you are done with your code for the day: Stage, Commit, Push to keep everyone updated: 
+
+    - Stage your code changes: 
+
+    ```
+    git add .
+    ```
+
+    - Commit Your Code: 
+    ```
+    git commit -m "Leave a meaningful message about the code you have written/changed"
+    ```
+
+    - Push Your Code to Github: 
+    ```
+    git push origin your-branch-name
+    ```
+
+- Create A Pull Request on Github but *DO NOT MERGE* the request 
+
+
 ## Launch local development server 
 - After cloning the repo, open the source code in your IDE 
 - Ensure that you have installed node and npm  
