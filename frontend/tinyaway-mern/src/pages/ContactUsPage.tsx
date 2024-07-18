@@ -1,7 +1,13 @@
+import InternationalOffices from "../components/contactpagecomponents/InternationalOffices"
+import SplitHero from "../components/contactpagecomponents/SplitHero"
+import ContactSection from "../components/sharedcomponents/contactform/ContactSection"
+
 export default function ContactUsPage() {
     return(
-        <h1>
-            Contact Us Page
-        </h1>
+        <>
+            <SplitHero />
+            <InternationalOffices />
+            <ContactSection />
+        </>
     )
 }

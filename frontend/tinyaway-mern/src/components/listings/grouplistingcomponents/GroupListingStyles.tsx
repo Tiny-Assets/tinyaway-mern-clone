@@ -18,3 +18,9 @@ export const DestinationsTitle = styled.h1`
     font-weight: 700; 
     margin-top: 30px;  
 `
+
+export const AllListingsWrapper = styled.div`
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+`

@@ -3,20 +3,19 @@ import styled from "styled-components";
 // Contact Section Styles 
 export const ContactWrapper = styled.div`
     background-size: cover; 
-    background-height: 90vh; 
     display: flex; 
     align-items: center; 
     justify-content: center; 
     gap: 10%; 
     width: 100%; 
-    height: 90vh; 
+    height: 80vh; 
 
 
     h1 {
         color: white; 
         font-weight: 700;
         width: 600px;
-        margin-bottom: 100px;  
+        margin-bottom: 50px;  
     }
 
     p {

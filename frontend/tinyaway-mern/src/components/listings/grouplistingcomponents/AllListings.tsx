@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ListingContainer } from "./GroupListingStyles";
+import { AllListingsWrapper, ListingContainer } from "./GroupListingStyles";
 import SingleListingCard from "../singlelistingcard/SingleListingCard";
 import RenderPagination from "../../../sharedutilities/renderPagination";
 
@@ -45,7 +45,7 @@ export default function AllListings() {
     },[pageSelected, setDisplayedListings, listings]); 
 
     return(
-        <>
+        <AllListingsWrapper>
             <ListingContainer>
                 { fetchStatus && 
                     displayedListings.map((listing, index) => (
@@ -54,6 +54,6 @@ export default function AllListings() {
                 }
             </ListingContainer>
                 <RenderPagination dataQuantity={ listings.length } btnClick={ selectPage } pageSelected={ pageSelected } />
-        </>
+        </AllListingsWrapper>
     )
 }
