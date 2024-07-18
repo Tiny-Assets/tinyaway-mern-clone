@@ -15,7 +15,6 @@ Testing Tiny Away Clone with MERN
 ```
     git config --global user.name "Your GitHub Username"
     git config --global user.email "Your GitHub Email"
-
 ```
 
 - Authenticate your Github 
@@ -30,11 +29,13 @@ Testing Tiny Away Clone with MERN
     - Copy the URL shown under either "HTTPS" or "SSH". If you're prompted to select a protocol, choose the one you prefer or have set up previously.
     - Then use the following command with the URL/SSH: 
 
+
     ```
     git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
     ```
 
 - Create A New Branch To Work On Your Code 
+
 
 ```
     git checkout -b new-branch-name
