@@ -191,8 +191,6 @@ SingleImagesListingContext
 - For setting URL array on Single Listing Page, to enable the scrolling gallery
 - Path: src/contexts/SingleListingImagesContext.tsx
 
--------------------------------------------------------------------------------
-
 <!--   ----------------------------------------------------------------------------------------------------------- -->
 <!--   ----------------------------------------------------------------------------------------------------------- -->
 <!--   ----------------------------------------------------------------------------------------------------------- -->
@@ -220,3 +218,7 @@ useGetImages
 usePagination
 - Used for pagination of cards displayed
 - Path: src/hooks/usePagination.tsx
+
+useConstructQuery
+- Used to construct search query for sample database search 
+- Path:  src/hooks/useConstructQuery.tsx
