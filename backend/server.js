@@ -1,9 +1,8 @@
 import './database.js'; 
 import express from 'express'; 
 import cors from 'cors'; 
-import { tinyAwayAll, tinyAway12, tinyAwayListingSummary, getListingDetails, findListing, findSearchResults, getHousePictures,
-         getAmenity, 
-         aggregatedSearch} from './controllers/listingsController.js';
+import { tinyAwayAll, tinyAway12, tinyAwayListingSummary, getListingDetails, findSearchResults, getHousePictures,
+         getAmenity } from './controllers/listingsController.js';
 import { tinyStoriesAll, tinyStories8 } from './controllers/storiesController.js';
 
 const app = express(); 
@@ -103,20 +102,45 @@ app.get('/api/findamenities', async (req, res) => {
 }); 
 
 // GET Matching SEARCH results (To be implemented once Atlas Search is set up)
-app.get('/api/searchfilter', async (req, res) => {
+app.get('/api/search', async (req, res) => {
+  try {
+    const country = req.query.country;
+    // const bedrooms = req.query.bedrooms;
+    const accommodates = req.query.accommodates;
+    const query = {};
+      if (country) {
+        query.country = country;
+      }
+
+      // if (bedrooms) {
+      //   query.bedrooms = parseInt(bedrooms); 
+      // }
+      
+      if (accommodates) {
+        query.accommodates = parseInt(accommodates);
+      } else {
+        query.accommodates = 0; 
+      }
+    
+    const results = await findSearchResults(query); 
+    res.json(results); 
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('An error occurred');
+  }
 }); 
 
 // Test aggregated search (To be implemented once Atlas Search is set up)
-app.get('/api/aggregated', async (req, res) => {
+// app.get('/api/aggregated', async (req, res) => {
 
-  try {
-    const result = await aggregatedSearch();
-    res.json(result);  
-} catch (error) {
-    console.error(error);
-    res.status(500).send('aggregation failed');
-}
-}); 
+//   try {
+//     const result = await aggregatedSearch();
+//     res.json(result);  
+// } catch (error) {
+//     console.error(error);
+//     res.status(500).send('aggregation failed');
+// }
+// }); 
 
 
 // ---------------------------------------------------------------------------------------- // 
@@ -155,21 +179,9 @@ app.get('/api/storiessection', async (req, res) => {
 
 
 // To delete when data calling / search function for tinyaway listings is done. This is using sample airbnb data
-// GET ONE specific listing
-app.get('/api/findHouse', async (req, res) => {
-  const listingId = req.query.listingId; 
-  
-  try {
-    const result = await findListing(listingId);
-    res.json(result);  
-} catch (error) {
-    console.error(error);
-    res.status(500).send('An error occurred');
-}
-}); 
 
 // Return filtered listing results
-app.get('/api/search', async (req, res) => {
+app.get('/api/searchaBnB', async (req, res) => {
   try {
     const country = req.query.country;
     const bedrooms = req.query.bedrooms;

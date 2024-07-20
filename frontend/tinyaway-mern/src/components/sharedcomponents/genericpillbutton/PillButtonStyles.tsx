@@ -34,6 +34,6 @@ export const Pill = styled.div`
     &.white {
         background-color: white; 
         color: var(--corpDarkGrey2);
-        margin-top: 30px; 
+        // margin-top: 30px; 
     }
 `

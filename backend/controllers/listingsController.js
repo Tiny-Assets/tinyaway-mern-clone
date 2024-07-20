@@ -41,27 +41,21 @@ export async function getAmenity(amenityId) {
 // -------------------------------------------------------------------------------------------- // 
 // -------------------------------------------------------------------------------------------- // 
 
-// Testing Aggregated Function
-export async function aggregatedSearch() {
-  const listings = await client.db("ta_listings").collection("listings").findOne({});
-
-  return listings.tags; 
-}
-
-
-// Sample airbnb data fetching 
-export async function call12() {
-  const find12 = await client.db("sample_airbnb").collection("listingsAndReviews").find({}).limit(12).toArray(); 
-  console.log(find12); 
-  return find12; 
-}
-
-export async function findListing(listingId) {
-  const findHouse = await client.db("sample_airbnb").collection("listingsAndReviews").findOne({_id: listingId}); 
-  return findHouse; 
-}
-
+// LISTINGS SEARCH DEMO FILTER - ONLY ABLE TO FILTER BY COUNTRY + ACCOMMODATES FOR NOW // 
 export async function findSearchResults(query) {
-  const searchResults = await client.db("sample_airbnb").collection("listingsAndReviews").find(query).toArray();
-  return searchResults; 
+  let filterResults = []; 
+
+  if (query.country) {
+  filterResults = await client.db("ta_listings").collection("listingDetails")
+      .find({ country: parseInt(query.country), 
+          accommodates: { $gte: parseInt(query.accommodates)}
+      })
+      .toArray(); 
+  } else {
+    filterResults = await client.db("ta_listings").collection("listingDetails")
+        .find({ accommodates: { $gte: parseInt(query.accommodates) }})
+        .toArray(); 
+  }
+
+  return filterResults; 
 }

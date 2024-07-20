@@ -8,15 +8,27 @@ export const useConstructQuery = () => {
     const { roomCount } = useContext(RoomNumberContext); 
     const { guestCount } = useContext(GuestNumberContext); 
 
+    const countryNumber = {
+        AUSTRALIA: 21, 
+        MALAYSIA: 5,
+        NEW_ZEALAND: 615, 
+        TAIWAN: 7, 
+        EUROPE: 9
+    }
+
     const queryStringParts = []; 
     
     if ( selectedLocation !== '') {
-        queryStringParts.push(`country=${ selectedLocation }`); 
+        if ( selectedLocation === 'NEW ZEALAND') {
+            queryStringParts.push(`country=615`); 
+        } else {
+            queryStringParts.push(`country=${ countryNumber[selectedLocation] }`); 
+        }
     }
 
-    if ( roomCount > 0 ) {
-        queryStringParts.push(`bedrooms=${ roomCount }`); 
-    }
+    // if ( roomCount > 0 ) {
+    //     queryStringParts.push(`bedrooms=${ roomCount }`); 
+    // }
 
     if ( guestCount > 0 ) {
         queryStringParts.push(`accommodates=${ guestCount }`); 
@@ -25,7 +37,13 @@ export const useConstructQuery = () => {
     const queryString = queryStringParts.length > 0 ?
         `?${queryStringParts.join('&')}`
         :
-        ''
-        
+        ''    
     return queryString; 
 }
+
+// Original country numbers: 
+// Australia - 21
+// Malaysia - 5
+// New Zealand - 615
+// Taiwan - 7 
+// Europe (In database: United Kingdom) - 9 

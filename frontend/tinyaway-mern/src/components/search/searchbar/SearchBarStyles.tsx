@@ -11,7 +11,7 @@ export const SearchGrid = styled.div`
 export const SubmenuGrid = styled.div`
     display: grid; 
     grid-template-columns: repeat(45, 25px); 
-    grid-template-rows: repeat(10, 50px); 
+    grid-template-rows: repeat(6, 50px); 
     justify-content: center; 
     position: relative; 
     top: -30px;
@@ -39,6 +39,7 @@ export const Sub3 = styled.div`
     grid-row-start: 2;
     grid-row-end: 7; 
 `
+
 
 export const SingleField = styled.div`
     background-color: white; 
