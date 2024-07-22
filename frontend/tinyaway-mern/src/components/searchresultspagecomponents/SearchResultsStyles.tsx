@@ -71,6 +71,11 @@ export const TypeFilterTitle = styled.div`
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
+    
+    p {
+        font-size: 24px; 
+        font-weight: 600; 
+    }
 `
 
 export const FilterDropdownOptions = styled.div`

@@ -31,10 +31,6 @@ export default function SingleListingCard({ listingId, name, featuredImage, tags
             .catch(error => console.error('Error fetching data:', error));
     },[url, name, tags]); 
 
-    // useEffect(() => {
-    //     console.log(details); 
-    // }, [details]); 
-
     const navigate = useNavigate(); 
 
     const clickCard = () => {
@@ -49,7 +45,7 @@ export default function SingleListingCard({ listingId, name, featuredImage, tags
                         <ListingImageArea style={{backgroundImage:`url(${ featuredImage })`}} />
                         <CardHeader>
                             <ListingSide>
-                                <CardTitle>{ name.toUpperCase() }</CardTitle>
+                                <CardTitle>{ listingName.toUpperCase() }</CardTitle>
                                 <CardSubtitle>{ details.street }</CardSubtitle>
                                 <RatingSection>
                                     <FontAwesomeIcon icon={ faStar } style={{'color':'orange'}} />

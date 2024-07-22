@@ -15,11 +15,6 @@ interface FiltersMenuProps {
 }
 
 export default function FiltersMenu({ closeMenu }: FiltersMenuProps) { 
-    const [accomOpen, setAccomOpen] = useState(false); 
-    const [escapeOpen, setEscapeOpen] = useState(false); 
-    const [accessOpen, setAccessOpen] = useState(false); 
-    const [roomBedOpen, setRoomBedOpen] = useState(false); 
-
     const { selectedLocation } = useContext(LocationContext); 
     const { accomType, escapeType, accessType } = useContext(SearchFilterContext); 
 
@@ -36,40 +31,28 @@ export default function FiltersMenu({ closeMenu }: FiltersMenuProps) {
         <FiltersWrapper>
             <FiltersLayout>
                 <TypeFilterWrapper>
-                    <TypeFilterTitle  onClick={ toggleState(setAccomOpen) }>
+                    <TypeFilterTitle>
                         <p>ACCOMMODATION TYPE</p>
-                        <FontAwesomeIcon icon={ faCaretDown } />
                     </TypeFilterTitle>
-                        {   accomOpen &&
-                                <AccomOptions />
-                        }
+                    <AccomOptions />
                 </TypeFilterWrapper>
                 <TypeFilterWrapper>
-                    <TypeFilterTitle onClick={ toggleState(setEscapeOpen) }>
+                    <TypeFilterTitle>
                         <p>ESCAPE TYPE</p>
-                        <FontAwesomeIcon icon={ faCaretDown } />
                     </TypeFilterTitle>
-                        {   escapeOpen &&
-                                <EscapeOptions />
-                        }
+                        <EscapeOptions />
                 </TypeFilterWrapper>
                 <TypeFilterWrapper>
-                    <TypeFilterTitle onClick={ toggleState(setAccessOpen) }>
+                    <TypeFilterTitle>
                         <p>GUEST ACCESS</p>
-                        <FontAwesomeIcon icon={ faCaretDown } />
                     </TypeFilterTitle>
-                        {   accessOpen &&
-                                <AccessOptions />
-                        }
+                        <AccessOptions />
                 </TypeFilterWrapper>
                 <TypeFilterWrapper>
-                    <TypeFilterTitle onClick={ toggleState(setRoomBedOpen) }>
+                    <TypeFilterTitle>
                         <p>Rooms and Beds</p>
-                        <FontAwesomeIcon icon={ faCaretDown } />
                     </TypeFilterTitle>
-                        {   roomBedOpen &&
-                                <RoomBedOptions />
-                        }
+                        <RoomBedOptions />
                 </TypeFilterWrapper>
                 <TypeFilterWrapper>
                     <p>Bringing pets?</p>
