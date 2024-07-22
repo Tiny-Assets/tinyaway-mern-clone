@@ -14,12 +14,14 @@ import BlogPage from "./pages/BlogPage";
 import LoginPage from "./pages/LoginPage";
 import BookYourStayPage from "./pages/BookYourStayPage";
 import SearchResults from "./pages/SearchResultsPage";
+import ShoppingCartPage from "./pages/ShoppingCartPage";
 
 export default function App() {
   return (
     <Routes>
       <Route path='/' element={ <HomePage /> } />
       <Route path='/gift-cards' element={ <GiftCardsPage /> } />
+      <Route path='/check-out' element={ <ShoppingCartPage /> } />
       
       <Route path='/tiny-house-destinations' element={ <TinyHouseDestinationsPage /> } />
       <Route path='/tiny-house-destinations/:id' element={ <SingleListing />} />
