@@ -1,7 +1,7 @@
 import { LightBoxHeader, LightBoxWrapper } from "./SubmenuStyles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
-import "react-datepicker/dist/react-datepicker.css";
+//import "react-datepicker/dist/react-datepicker.css";
 
 export default function DateLightBox() {
     return(
