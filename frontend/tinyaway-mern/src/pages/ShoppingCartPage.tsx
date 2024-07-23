@@ -1,7 +1,9 @@
+import ShoppingCartLayout from "../components/shoppingcartcomponents/ShoppingCartLayout";
+
 export default function ShoppingCartPage() {
     return(
         <>
-            Shopping Cart Page
+            <ShoppingCartLayout />
         </>
     )
 }

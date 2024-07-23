@@ -8,16 +8,19 @@ import Navbar from "./components/navigation/navbar/Navbar.tsx";
 import Footer from './components/navigation/footer/Footer.tsx';
 import IgFeedApi from './components/sharedcomponents/instagramfeed/IgFeedApi.tsx';
 import NewsletterSignUp from './components/sharedcomponents/newsletterform/NewsletterSignUp.tsx';
+import { ShoppingCartProvider } from './contexts/ShoppingCartContext.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <BrowserRouter>
     <React.StrictMode>
+      <ShoppingCartProvider>
       <AnnouncementBar />
       <Navbar />
         <App />
       <IgFeedApi />
       <NewsletterSignUp />
       <Footer />
+      </ShoppingCartProvider>
     </React.StrictMode>
   </BrowserRouter>
 )
